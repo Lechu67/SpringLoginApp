@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <%--  <springForm:form method="POST" modelAttribute="usercustom" action="signup">
+    <springForm:form method="POST" modelAttribute="usercustom" action="signup">
         <table>
             <tr>
                 <td>Username:</td>
@@ -23,8 +23,8 @@
                 <td colspan="3"><button type="submit">Signup</button></td>
             </tr>
         </table>
-    </springForm:form>--%>
-<c:url value="/signup" var="signupUrl"/>
+    </springForm:form>
+<%--<c:url value="/signup" var="signupUrl"/>
 <form action="${signupUrl}" method="post">
     <p>
         <label for="username">Enter Username</label>
@@ -36,6 +36,6 @@
         <input type="password" id="password" name="password"/>
     </p>
     <button type="submit" class="btn">Signup</button>
-</form>
+</form>--%>
 </body>
 </html>
