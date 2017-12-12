@@ -1,35 +1,32 @@
 package app1.service;
 
 
-import app1.config.WebSecurityConfig;
 import app1.model.UserCustom;
 import app1.repository.UserDAO;
-import app1.repository.UserDAOImpl;
-import app1.repository.UserRepositoryHardCoded;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 @Service
 public class UserDetailService implements UserDetailsService {
 
     @Autowired
-    private UserDAOImpl userDAO;
+    private UserDAO userDAO;
     @Autowired
     private BCryptPasswordEncoder encoder;
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+
         UserCustom user = userDAO.findByName(userName);
         if (user== null) {
             throw new UsernameNotFoundException(userName);
         }
-
         return toUserDetails(user);
     }
 

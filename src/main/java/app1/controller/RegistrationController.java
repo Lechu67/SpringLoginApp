@@ -12,7 +12,6 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-//@ControllerAdvice
 public class RegistrationController {
 
     @Autowired
@@ -40,7 +39,7 @@ public class RegistrationController {
     }*/
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
     public String addUser(
-            @ModelAttribute("usercustom") /*@Validated*/ UserCustom userCustom,
+            @ModelAttribute("usercustom") @Validated UserCustom userCustom,
             BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){

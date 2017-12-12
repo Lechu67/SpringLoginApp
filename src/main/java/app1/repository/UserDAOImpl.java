@@ -1,26 +1,24 @@
 package app1.repository;
 
-import app1.config.RepoConfig;
 import app1.model.UserCustom;
 import app1.model.UserCustomRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
-
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 @Repository
+@Transactional
 public class UserDAOImpl implements UserDAO {
 
-    private JdbcTemplate jdbcTemplate;
     @Autowired
-    private RepoConfig repoConfig;
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public void insert(UserDetails user) {
-
         String sql = "INSERT INTO users " + "(username,password,role) VALUES (?,?,?)";
-        jdbcTemplate = new JdbcTemplate(repoConfig.dataSource());
         jdbcTemplate.update(sql, new Object[]{user.getUsername(), user.getPassword(), "USER"});
     }
 
@@ -46,9 +44,8 @@ public class UserDAOImpl implements UserDAO {
 //        }
     @Override
     public UserCustom findByName(String username) {
-
+        System.out.println(TransactionSynchronizationManager.isActualTransactionActive() + "HEEEEEEEEEEEEREEEEEEEE");
         String sql = "SELECT * FROM users WHERE username = ?";
-        jdbcTemplate = new JdbcTemplate(repoConfig.dataSource());
         UserCustom userCustom = (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{username}, new UserCustomRowMapper());
         return userCustom;
     }
@@ -86,9 +83,7 @@ public class UserDAOImpl implements UserDAO {
 //    }
     @Override
     public UserCustom findById(int id) {
-
         String sql = "SELECT * FROM users WHERE ID = ?";
-        jdbcTemplate = new JdbcTemplate(repoConfig.dataSource());
         UserCustom userCustom = (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{id}, new UserCustomRowMapper());
         return userCustom;
         /*Before*/
