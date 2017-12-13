@@ -1,22 +1,18 @@
 package app1.validator;
 
 import app1.model.UserCustom;
-import com.mysql.cj.api.Session;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
+import app1.repository.UserDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Component
-@PropertySource("classpath:application.properties")
 public class UserValidator implements Validator {
 
-    @Value("${name.empty}")
-    private String NAME_EMPTY;
-
+    @Autowired
+    private UserDAO userDAO;
 
     @Override
     public boolean supports(Class<?> clazz) {
@@ -25,12 +21,20 @@ public class UserValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"username",NAME_EMPTY);
+        ValidationUtils.rejectIfEmptyOrWhitespace
+                (errors, "username", "username.empty", "Required");
+        ValidationUtils.rejectIfEmptyOrWhitespace
+                (errors, "password", "password.empty", "Required");
 
+        UserCustom targetUser = (UserCustom) target;
 
-       /* UserCustom userCustom = (UserCustom) target;
-        if (userCustom!=null){
-            errors.rejectValue("username", "name.exist");
-        }*/
+        if (isUserExists(targetUser.getUsername())) {
+            errors.rejectValue("username", "username.exist", "User already exist");
+        }
+    }
+
+    private boolean isUserExists(String userName) {
+        UserCustom byName = userDAO.findByName(userName);
+        return byName != null;
     }
 }

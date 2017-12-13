@@ -2,11 +2,11 @@ package app1.controller;
 
 import app1.model.UserCustom;
 import app1.service.UserDetailService;
-import app1.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +17,12 @@ public class RegistrationController {
     @Autowired
     private UserDetailService service;
 
+    @Autowired
+    private Validator validator;
+
     @InitBinder
     protected void initBinder(WebDataBinder binder){
-        binder.setValidator(new UserValidator());
+        binder.setValidator(validator);
     }
     @ModelAttribute("usercustom")
     public UserCustom createUserModel(){

@@ -3,6 +3,7 @@ package app1.repository;
 import app1.model.UserCustom;
 import app1.model.UserCustomRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
@@ -46,8 +47,13 @@ public class UserDAOImpl implements UserDAO {
     public UserCustom findByName(String username) {
         System.out.println(TransactionSynchronizationManager.isActualTransactionActive() + "HEEEEEEEEEEEEREEEEEEEE");
         String sql = "SELECT * FROM users WHERE username = ?";
-        UserCustom userCustom = (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{username}, new UserCustomRowMapper());
-        return userCustom;
+        try {
+            UserCustom userCustom =
+                    (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{username}, new UserCustomRowMapper());
+            return userCustom;
+        } catch(IncorrectResultSizeDataAccessException e){
+            return null;
+        }
     }
 
     /*Before*/
