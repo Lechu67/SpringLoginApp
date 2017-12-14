@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 @Service
 public class UserDetailService implements UserDetailsService {
@@ -31,6 +30,7 @@ public class UserDetailService implements UserDetailsService {
     }
 
     public void addUser(UserCustom user){
+        user.setRole("USER");
         user.setPassword(encoder.encode(user.getPassword()));
         userDAO.insert(toUserDetails(user));
     }

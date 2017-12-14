@@ -14,11 +14,21 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class RegistrationController {
 
-    @Autowired
+    private final UserDetailService service;
+
+    private final Validator validator;
+
+    /*@Autowired
     private UserDetailService service;
 
     @Autowired
-    private Validator validator;
+    private Validator validator;*/
+
+    @Autowired //which way better ?
+    public RegistrationController(UserDetailService service, Validator validator){
+        this.service = service;
+        this.validator = validator;
+    }
 
     @InitBinder
     protected void initBinder(WebDataBinder binder){
@@ -34,12 +44,6 @@ public class RegistrationController {
         return "signup";
     }
 
-    /*@RequestMapping(value = "/signup", method = RequestMethod.POST)
-    public String addUser(@RequestParam("username") String username, @RequestParam("password") String password) {
-
-        service.addUser(new UserCustom(1,username,password,"USER"));
-        return "redirect:/";
-    }*/
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
     public String addUser(
             @ModelAttribute("usercustom") @Validated UserCustom userCustom,
@@ -47,9 +51,8 @@ public class RegistrationController {
 
         if(bindingResult.hasErrors()){
             return "signup";
-
         }
-        service.addUser(new UserCustom(1,userCustom.getUsername(),userCustom.getPassword(),"USER"));
+        service.addUser(userCustom);
         return "redirect:/";
     }
 }

@@ -10,7 +10,6 @@ public class UserCustomRowMapper implements RowMapper {
     @Override
     public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
         UserCustom userCustom = new UserCustom();
-        userCustom.setId(rs.getInt("ID"));
         userCustom.setUsername(rs.getString("USERNAME"));
         userCustom.setPassword(rs.getString("PASSWORD"));
         userCustom.setRole(rs.getString("ROLE"));

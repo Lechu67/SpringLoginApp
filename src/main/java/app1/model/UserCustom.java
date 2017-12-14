@@ -1,12 +1,17 @@
 package app1.model;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 public class UserCustom implements UserDetails {
 
-    private int id;
     private String username;
     private String password;
     private String role;
@@ -14,20 +19,14 @@ public class UserCustom implements UserDetails {
     public UserCustom() {
     }
 
-    public UserCustom(int id, String name, String password, String role) {
-        this.username = name;
-        this.password = password;
-        this.role = role;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority(role));
+        return !authorities.isEmpty() ? authorities : null;
     }
+
 
     public void setPassword(String password) {
         this.password = password;
@@ -53,10 +52,6 @@ public class UserCustom implements UserDetails {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     @Override
