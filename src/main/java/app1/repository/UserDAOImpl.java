@@ -99,7 +99,8 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public UserCustom findById(int id) {
         String sql = "SELECT * FROM users WHERE ID = ?";
-        UserCustom userCustom = (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{id}, new UserCustomRowMapper());
+        UserCustom userCustom =
+                (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{id}, new UserCustomRowMapper());
         return userCustom;
         /*Before*/
 //            Connection connection = null;

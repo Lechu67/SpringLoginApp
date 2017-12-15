@@ -78,7 +78,7 @@ public class UserDetailServiceTest {
         assertThat(service.loadUserByUsername(user),instanceOf(UserDetails.class));
     }
     @Test
-    public void shouldReturnAnInstanceOfUseretail(){
+    public void shouldInertAddUserWithCorrectParam(){
         String expectedPassword = "test";
 
         userBuilderMock();

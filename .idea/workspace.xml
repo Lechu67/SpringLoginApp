@@ -9,33 +9,16 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java" line="10" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d04d20-84a7-4ad6-b14d-7e307a73c5a1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/zad7_1_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zad7_1_war_exploded.xml" />
+    <list default="true" id="93d04d20-84a7-4ad6-b14d-7e307a73c5a1" name="Default" comment="add branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/app1/controller/RegistrationController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java" afterPath="$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/model/UserCustomRowMapper.java" afterPath="$PROJECT_DIR$/src/main/java/app1/model/UserCustomRowMapper.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" afterPath="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/controller/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/app1/controller/RegistrationController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/model/UserCustom.class" afterPath="$PROJECT_DIR$/target/classes/app1/model/UserCustom.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/model/UserCustomRowMapper.class" afterPath="$PROJECT_DIR$/target/classes/app1/model/UserCustomRowMapper.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/app1/repository/UserDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/app1/repository/UserDAOImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/app1/service/UserDetailService.class" afterPath="$PROJECT_DIR$/target/classes/app1/service/UserDetailService.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/AppControllerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/controller/AppControllerTest.class" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/controller/RegistrationController.class" afterPath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/controller/RegistrationController.class" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/model/UserCustom.class" afterPath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/model/UserCustom.class" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/model/UserCustomRowMapper.class" afterPath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/model/UserCustomRowMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/repository/UserDAOImpl.class" afterPath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/repository/UserDAOImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/service/UserDetailService.class" afterPath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/service/UserDetailService.class" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/zad7_1.iml" afterPath="$PROJECT_DIR$/zad7_1.iml" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/repository/UserDAOImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/app1/repository/UserDAOImplTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/service/UserDetailServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/app1/service/UserDetailServiceTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -88,11 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app1/controller/AppController.java">
+      <file leaf-file-name="UserCustom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../zad8_1/src/main/java/app1/model/UserCustom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+            <state relative-caret-position="187">
+              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -101,53 +84,42 @@
       <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+            <state relative-caret-position="289">
+              <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
               <folding>
-                <marker date="1513269878823" expanded="true" signature="992:1049" ph="INSERT INTO users... " />
-                <marker date="1513269878823" expanded="true" signature="2138:2176" ph="SELECT * FRO... users" />
-                <marker date="1513269878823" expanded="true" signature="3780:3812" ph="SELECT * FRO... users" />
+                <marker date="1513340766994" expanded="true" signature="992:1049" ph="INSERT INTO users... " />
+                <marker date="1513340766994" expanded="true" signature="2138:2176" ph="SELECT * FRO... users" />
+                <marker date="1513340766994" expanded="true" signature="3780:3812" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCustom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java">
+      <file leaf-file-name="UserValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
-              <folding>
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#951#952#0" expanded="true" />
-                <element signature="e#1000#1001#0" expanded="true" />
-                <element signature="e#1036#1037#0" expanded="true" />
-                <element signature="e#1085#1086#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-                <element signature="e#1249#1250#0" expanded="true" />
-                <element signature="e#1281#1282#0" expanded="true" />
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1424#1425#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
-                <element signature="e#1542#1543#0" expanded="true" />
-                <element signature="e#1590#1591#0" expanded="true" />
-                <element signature="e#1618#1619#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDetailService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDetailService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            <state relative-caret-position="272">
+              <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCustom.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -156,12 +128,34 @@
       <file leaf-file-name="UserDAOImplTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            <state relative-caret-position="782">
+              <caret line="62" column="62" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
               <folding>
-                <marker date="1513270416081" expanded="true" signature="1191:1248" ph="INSERT INTO users... " />
-                <marker date="1513270416081" expanded="true" signature="1698:1755" ph="INSERT INTO users... " />
+                <element signature="e#1768#1769#0" expanded="true" />
+                <element signature="e#1811#1812#0" expanded="true" />
+                <marker date="1513340900270" expanded="true" signature="1276:1333" ph="INSERT INTO users... " />
+                <marker date="1513340900270" expanded="true" signature="1923:1961" ph="SELECT * FRO... users" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDetailServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="80" column="50" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="92" column="99" lean-forward="false" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="99" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,6 +179,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -226,11 +225,11 @@
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserCustomRowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
       </list>
@@ -263,6 +262,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="166" />
+    <option name="y" value="31" />
     <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
@@ -282,10 +283,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -465,11 +463,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zad1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zad8_1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -524,7 +525,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam">
+  <component name="RunManager" selected="JUnit.UserDAOImplTest.shouldFindOneMatchingRow">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -544,31 +545,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="RegistrationControllerTest.shouldReturnSignUpViewWithErrors5555" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="app1.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="zad7_1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app1.controller" />
-      <option name="MAIN_CLASS_NAME" value="app1.controller.RegistrationControllerTest" />
-      <option name="METHOD_NAME" value="shouldReturnSignUpViewWithErrors5555" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="UserDAOImplTest.shouldAffectOnlyOneRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -608,6 +584,31 @@
       <option name="PACKAGE_NAME" value="app1.repository" />
       <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
       <option name="METHOD_NAME" value="shouldAffectOnlyOneRowWiGivenUserParam" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="app1.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="zad7_1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="app1.repository" />
+      <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
+      <option name="METHOD_NAME" value="shouldFindOneMatchingRow" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -817,18 +818,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UserValidatorTest.shouldSupportOnlyUserCutstomClass" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.shouldReturnSignUpViewWithErrors5555" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRow" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.app1 in zad7_1" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRow" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.app1 in zad7_1" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldFindOneMatchingRow" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRow" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldFindOneMatchingRow" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.app1 in zad7_1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserValidatorTest.shouldSupportOnlyUserCutstomClass" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.shouldReturnSignUpViewWithErrors5555" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAffectOnlyOneRow" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserValidatorTest.shouldSupportOnlyUserCutstomClass" />
       </list>
     </recent_temporary>
   </component>
@@ -859,44 +860,45 @@
       <workItem from="1512995886769" duration="36702000" />
       <workItem from="1513094968170" duration="168000" />
       <workItem from="1513095347875" duration="23855000" />
-      <workItem from="1513245525827" duration="24452000" />
+      <workItem from="1513245525827" duration="29291000" />
+      <workItem from="1513357925732" duration="143000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRow - 2017.12.14 at 17h 39m 19s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRow" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.14 at 18h 20m 46s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRow - 2017.12.14 at 17h 39m 44s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRow" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.14 at 18h 21m 13s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRow - 2017.12.14 at 17h 44m 43s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRow" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.14 at 18h 26m 37s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 50m 51s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.14 at 18h 28m 44s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 51m 28s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.14 at 18h 29m 25s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 52m 12s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.14 at 18h 30m 40s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 52m 35s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.15 at 13h 26m 11s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 53m 03s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.15 at 13h 26m 57s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 53m 31s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.15 at 13h 27m 18s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAffectOnlyOneRowWiGivenUserParam - 2017.12.14 at 17h 53m 38s.xml">
-      <configuration name="UserDAOImplTest.shouldAffectOnlyOneRowWiGivenUserParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldFindOneMatchingRow - 2017.12.15 at 13h 28m 23s.xml">
+      <configuration name="UserDAOImplTest.shouldFindOneMatchingRow" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162379000" />
+    <option name="totallyTimeSpent" value="167361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -914,7 +916,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44061962" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32702237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32702237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -923,11 +925,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47332186" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40963855" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142202" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -936,6 +936,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295107" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40963855" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -943,6 +945,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="add branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1031,20 +1037,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE-sources.jar!/org/springframework/validation/annotation/Validated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.1.RELEASE/spring-webmvc-5.0.1.RELEASE.jar!/META-INF/spring-form.tld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.2.RELEASE/spring-web-5.0.2.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ModelAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1056,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="252" column="15" lean-forward="false" selection-start-line="252" selection-start-column="15" selection-end-line="252" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,7 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="156" column="18" lean-forward="false" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,7 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="66" column="17" lean-forward="false" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,11 +1110,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,9 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#1246#1247#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1220,23 +1201,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-          <folding>
-            <marker date="1511963030655" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1511963030655" expanded="false" signature="160:1015" ph="..." />
-            <marker date="1511963030655" expanded="true" signature="1551:1884" ph="{...}" />
-            <marker date="1511963030655" expanded="false" signature="1953:1964" ph=" { " />
-            <marker date="1511963030655" expanded="false" signature="2008:2014" ph=" }" />
-            <marker date="1511963030655" expanded="true" signature="2085:2219" ph="{...}" />
-            <marker date="1511963030655" expanded="true" signature="2290:2424" ph="{...}" />
-            <marker date="1511963030655" expanded="true" signature="2507:4749" ph="{...}" />
-            <marker date="1511963030655" expanded="true" signature="4301:4742" ph="{...}" />
-            <marker date="1511963030655" expanded="true" signature="4386:4472" ph="{...}" />
-            <marker date="1511963030655" expanded="true" signature="4553:4640" ph="{...}" />
-            <marker date="1511963030655" expanded="false" signature="4682:4701" ph=" { " />
-            <marker date="1511963030655" expanded="false" signature="4718:4732" ph=" }" />
-            <marker date="1511963030655" expanded="true" signature="4846:5160" ph="{...}" />
-            <marker date="1511963030655" expanded="true" signature="5243:5660" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,7 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
           <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,7 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2291">
           <caret line="913" column="15" lean-forward="false" selection-start-line="913" selection-start-column="15" selection-end-line="913" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,7 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,17 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,31 +1270,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="92" column="99" lean-forward="false" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.0.RELEASE/spring-security-core-5.0.0.RELEASE-sources.jar!/org/springframework/security/core/GrantedAuthority.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,19 +1281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1376,19 +1292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserCustomRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.0.RELEASE/spring-security-core-5.0.0.RELEASE-sources.jar!/org/springframework/security/core/authority/SimpleGrantedAuthority.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
           <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,66 +1310,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserCustomRowMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar!/org/mockito/Matchers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="154" column="24" lean-forward="false" selection-start-line="154" selection-start-column="24" selection-end-line="154" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zad8_1/src/main/java/app1/model/UserCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        <state relative-caret-position="289">
+          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
-            <marker date="1513269878823" expanded="true" signature="992:1049" ph="INSERT INTO users... " />
-            <marker date="1513269878823" expanded="true" signature="2138:2176" ph="SELECT * FRO... users" />
-            <marker date="1513269878823" expanded="true" signature="3780:3812" ph="SELECT * FRO... users" />
+            <marker date="1513340766994" expanded="true" signature="992:1049" ph="INSERT INTO users... " />
+            <marker date="1513340766994" expanded="true" signature="2138:2176" ph="SELECT * FRO... users" />
+            <marker date="1513340766994" expanded="true" signature="3780:3812" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <marker date="1513270416081" expanded="true" signature="1191:1248" ph="INSERT INTO users... " />
-            <marker date="1513270416081" expanded="true" signature="1698:1755" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
-          <folding>
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1424#1425#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1542#1543#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        <state relative-caret-position="272">
+          <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="62" column="62" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+          <folding>
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+            <marker date="1513340900270" expanded="true" signature="1276:1333" ph="INSERT INTO users... " />
+            <marker date="1513340900270" expanded="true" signature="1923:1961" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="80" column="50" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="92" column="99" lean-forward="false" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
           <folding />
         </state>
       </provider>

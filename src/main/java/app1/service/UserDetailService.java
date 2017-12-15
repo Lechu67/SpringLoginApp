@@ -28,14 +28,11 @@ public class UserDetailService implements UserDetailsService {
         }
         return toUserDetails(user);
     }
-
     public void addUser(UserCustom user){
         user.setRole("USER");
         user.setPassword(encoder.encode(user.getPassword()));
         userDAO.insert(toUserDetails(user));
     }
-
-
     private UserDetails toUserDetails(UserCustom userCustom){
         return User.withUsername(userCustom.getUsername())
                 .password(userCustom.getPassword())

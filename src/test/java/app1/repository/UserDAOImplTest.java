@@ -1,6 +1,7 @@
 package app1.repository;
 
 import app1.model.UserCustom;
+import app1.model.UserCustomRowMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,10 +9,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 
 import static org.junit.Assert.*;
-import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -52,8 +54,14 @@ public class UserDAOImplTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldAffectOnlyOneRowWiGivenUserParam() {
-        String sql = "INSERT INTO users (username,password,role) VALUES (?,?,?)";
+    public void shouldThrowAnIllegalArgumentWhenUserParamIsNull() {
         userDAO.insert(userCustom2);
+    }
+    @Test
+    public void shouldFindOneMatchingRow(){
+        String username = "test";
+        String sql = "SELECT * FROM users WHERE username = ?";
+        userDAO.findByName(username);
+        verify(jdbcTemplateMock).queryForObject(eq(sql), eq(new Object[]{username}), any(UserCustomRowMapper.class));
     }
 }
