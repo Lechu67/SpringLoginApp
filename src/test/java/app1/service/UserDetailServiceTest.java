@@ -1,10 +1,6 @@
 package app1.service;
 
 
-import app1.config.AppConfig;
-import app1.config.RepoConfig;
-import app1.config.ServiceConfig;
-import app1.config.WebSecurityConfig;
 import app1.model.UserCustom;
 import app1.repository.UserDAO;
 import org.junit.Before;

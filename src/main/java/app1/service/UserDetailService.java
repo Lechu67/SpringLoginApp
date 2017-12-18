@@ -2,6 +2,7 @@ package app1.service;
 
 
 import app1.model.UserCustom;
+import app1.model.UserEntity;
 import app1.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -22,7 +23,7 @@ public class UserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
-        UserCustom user = userDAO.findByName(userName);
+        UserEntity user = userDAO.findByName(userName);
         if (user== null) {
             throw new UsernameNotFoundException(userName);
         }
@@ -33,10 +34,10 @@ public class UserDetailService implements UserDetailsService {
         user.setPassword(encoder.encode(user.getPassword()));
         userDAO.insert(toUserDetails(user));
     }
-    private UserDetails toUserDetails(UserCustom userCustom){
-        return User.withUsername(userCustom.getUsername())
-                .password(userCustom.getPassword())
-                .roles(userCustom.getRole())
+    private UserDetails toUserDetails(UserEntity userEntity){
+        return User.withUsername(userEntity.getUsername())
+                .password(userEntity.getPassword())
+                .roles(role
                 .build();
     }
 }

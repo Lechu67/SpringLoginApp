@@ -14,7 +14,8 @@ public class Role {
     @Column(name = "role")
     private String role;
 
-    @Column(name = "username")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "username")
     private String username;
 
 

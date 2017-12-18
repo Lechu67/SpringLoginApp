@@ -11,7 +11,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "users")
-public class UserHiber implements UserDetails {
+public class UserEntity implements UserDetails {
 
     @Id
     @Column(name = "username", unique = true)
@@ -19,18 +19,20 @@ public class UserHiber implements UserDetails {
     @Column(name = "password")
     private String password;
 
-    @OneToMany(mappedBy = "username")
-    @JoinColumn(name = "username")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "username")
     private Set<Role>  roles = new HashSet<Role>(0);
 
-    public UserHiber() {
+    public UserEntity() {
     }
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority());
+       /* for(Role role : getRoles()) {
+            authorities.add(new SimpleGrantedAuthority(role.getRole()));
+        }*/
+        roles.forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRole())));
         return !authorities.isEmpty() ? authorities : null;
     }
 
@@ -39,9 +41,6 @@ public class UserHiber implements UserDetails {
         this.password = password;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
 
     @Override
     public String getPassword() {
@@ -55,10 +54,6 @@ public class UserHiber implements UserDetails {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     @Override
