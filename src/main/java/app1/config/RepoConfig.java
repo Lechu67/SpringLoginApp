@@ -42,11 +42,11 @@ public class RepoConfig {
         dataSource.setPassword(environment.getProperty(DB_PASSWORD));
         return dataSource;
     }
-    /*@Bean
+ /*   @Bean
     public PlatformTransactionManager transactionManager(DataSource dataSource){
         return new DataSourceTransactionManager(dataSource);
-    }*/
-/*    @Bean
+    }
+    @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }*/

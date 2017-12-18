@@ -1,22 +1,27 @@
 package app1.model;
 
 
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import javax.persistence.*;
+import java.util.*;
 
-
+@Entity
+@Table(name = "users")
 public class UserHiber implements UserDetails {
 
-
+    @Id
+    @Column(name = "username", unique = true)
     private String username;
+    @Column(name = "password")
     private String password;
 
-    private String role;
+    @OneToMany(mappedBy = "username")
+    @JoinColumn(name = "username")
+    private Set<Role>  roles = new HashSet<Role>(0);
 
     public UserHiber() {
     }
@@ -25,7 +30,7 @@ public class UserHiber implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(role));
+        authorities.add(new SimpleGrantedAuthority());
         return !authorities.isEmpty() ? authorities : null;
     }
 
@@ -34,8 +39,8 @@ public class UserHiber implements UserDetails {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
     @Override
