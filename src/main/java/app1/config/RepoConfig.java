@@ -42,36 +42,36 @@ public class RepoConfig {
         dataSource.setPassword(environment.getProperty(DB_PASSWORD));
         return dataSource;
     }
-    @Bean
+    /*@Bean
     public PlatformTransactionManager transactionManager(DataSource dataSource){
         return new DataSourceTransactionManager(dataSource);
-    }
-    @Bean
+    }*/
+/*    @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource){
         return new JdbcTemplate(dataSource);
-    }
+    }*/
 
-   /* @Bean
+    @Bean
     public LocalSessionFactoryBean sessionFactoryBean(DataSource dataSource){
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         localSessionFactoryBean.setDataSource(dataSource);
         localSessionFactoryBean.setPackagesToScan(new String[]{"app1.model"});
         localSessionFactoryBean.setHibernateProperties(hibernateProperties());
         return localSessionFactoryBean;
-    }*/
+    }
 
-    /*private Properties hibernateProperties() {
+    private Properties hibernateProperties() {
         Properties properties = new Properties();
         //properties.put("hibernate.dialect", environment.getProperty("hibernate.dialect"));
         properties.put("hibernate.show_sql",environment.getRequiredProperty("hibernate.show_sql"));
        // properties.put("hibernate.format_sql",environment.getRequiredProperty("hibernate.format_sql"));
         return properties;
-    }*/
-    /*@Bean
+    }
+    @Bean
     @Autowired
     public HibernateTransactionManager transactionManager(SessionFactory sessionFactory){
         HibernateTransactionManager manager = new HibernateTransactionManager();
         manager.setSessionFactory(sessionFactory);
         return manager;
-    }*/
+    }
 }
