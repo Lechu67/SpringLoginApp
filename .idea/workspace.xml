@@ -9,75 +9,55 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java" line="10" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d04d20-84a7-4ad6-b14d-7e307a73c5a1" name="Default" comment="jdbc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/config/AppConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/config/AppInitializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/config/RepoConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/config/SecurityWebAppInitializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/config/ServiceConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/config/WebSecurityConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/controller/AppController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/controller/RegistrationController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/model/UserCustom.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/model/UserCustomRowMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/repository/UserDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/repository/UserDAOImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/repository/UserRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/repository/UserRepositoryHardCoded.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/service/UserDetailService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app1/validator/UserValidator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/controller/AppControllerTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/controller/RegistrationControllerTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/repository/UserDAOImplTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/service/UserDetailServiceTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/app1/validator/UserValidatorTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/AppControllerTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/config/AppConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/config/AppInitializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/config/RepoConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/config/SecurityWebAppInitializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/config/ServiceConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/config/WebSecurityConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/controller/AppController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/controller/RegistrationController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/model/UserCustom.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/model/UserCustomRowMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/repository/UserDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/repository/UserDAOImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/repository/UserRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/repository/UserRepositoryHardCoded.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/service/UserDetailService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/app1/validator/UserValidator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/classes/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/commons-io-1.3.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/commons-lang3-3.7.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/javax.servlet-api-3.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/junit-4.12.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/mysql-connector-java-6.0.6.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-aop-5.0.1.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-beans-5.0.1.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-context-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-core-5.0.1.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-expression-5.0.1.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-jcl-5.0.1.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-jdbc-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-security-config-5.0.0.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-security-core-5.0.0.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-security-web-5.0.0.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-tx-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/spring-webmvc-5.0.1.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/view/admin.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/view/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/view/login.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/view/signup.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test1/WEB-INF/web.xml" afterPath="" />
+    <list default="true" id="93d04d20-84a7-4ad6-b14d-7e307a73c5a1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/zad7_1_war.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/zad7_1_war_exploded.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/298039d1-c05d-443c-9536-22e8ede9b795.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_6.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_common_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_support_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_core_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_common_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_reflect_1_7_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_0_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_1_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_1_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_1_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_1_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_1_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_1_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -289,6 +269,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserHiber.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -760,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513598985241</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove git ignored files">
+      <created>1513615429740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1513615429740</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -796,7 +784,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178056000" />
+    <option name="totallyTimeSpent" value="178302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -820,7 +808,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38037866" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.66092944" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4251291" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32798165" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -899,7 +887,8 @@
     <MESSAGE value="add branch" />
     <MESSAGE value="add branch jdbc" />
     <MESSAGE value="jdbc" />
-    <option name="LAST_COMMIT_MESSAGE" value="jdbc" />
+    <MESSAGE value="remove git ignored files" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove git ignored files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
