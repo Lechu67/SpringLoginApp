@@ -18,19 +18,21 @@ import java.security.Principal;
 public class AppController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String rootView(Model model){
-        model.addAttribute("user",SecurityContextHolder.getContext().getAuthentication().getName());
+    public String rootView(Model model) {
+        model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getName());
         return "index";
     }
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String loginView(Principal user){
-            if(user==null){
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginView(Principal user) {
+        if (user == null) {
             return "login";
         }
         return "redirect:/";
     }
+
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String adminView(){
+    public String adminView() {
         return "admin";
     }
 

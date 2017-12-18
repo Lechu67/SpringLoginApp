@@ -33,26 +33,6 @@ public class UserDAOImpl implements UserDAO {
                 user.getPassword(),
                 user.getAuthorities().toString()});
     }
-        /*       Before: */
-//        try{
-//            connection = repoConfig.dataSource().getConnection();
-//            PreparedStatement statement = connection.prepareStatement(sql);
-//            statement.setString(1,user.getUsername());
-//            statement.setString(2, user.getPassword());
-//            statement.setString(3,"USER");
-//            statement.executeUpdate();
-//            statement.close();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } finally {
-//            if(connection!=null){
-//                try {
-//                    connection.close();
-//                } catch (SQLException e) {
-//                    throw new RuntimeException("Couldn't close the connection");
-//                }
-//            }
-//        }
     @Override
     public UserCustom findByName(String username) {
         String sql = "SELECT * FROM users WHERE username = ?";
@@ -63,75 +43,6 @@ public class UserDAOImpl implements UserDAO {
         } catch(IncorrectResultSizeDataAccessException e){
             return null;
         }
-    }
-
-    /*Before*/
-//        Connection connection = null;
-//        try {
-//            connection = repoConfig.dataSource().getConnection();
-//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1, "username");
-//            UserCustom user = null;
-//            ResultSet resultSet = preparedStatement.executeQuery();
-//            if (resultSet.next()) {
-//                user = new UserCustom(
-//                        resultSet.getInt("ID"),
-//                        resultSet.getString("username"),
-//                        resultSet.getString("password"),
-//                        resultSet.getString("role")
-//                );
-//            }
-//            resultSet.close();
-//            preparedStatement.close();
-//            return user;
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } finally {
-//            if (connection != null) {
-//                try {
-//                    connection.close();
-//                } catch (SQLException e) {
-//                    throw new RuntimeException("Couldn't close the connection");
-//                }
-//            }
-//        }
-//    }
-    @Override
-    public UserCustom findById(int id) {
-        String sql = "SELECT * FROM users WHERE ID = ?";
-        UserCustom userCustom = (UserCustom) jdbcTemplate.queryForObject(sql, new Object[]{id}, new UserCustomRowMapper());
-        return userCustom;
-        /*Before*/
-//            Connection connection = null;
-//            try {
-//                connection = repoConfig.dataSource().getConnection();
-//                PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//                preparedStatement.setInt(1,id);
-//                UserCustom user = null;
-//                ResultSet resultSet = preparedStatement.executeQuery();
-//                if(resultSet.next()){
-//                    user = new UserCustom(
-//                            resultSet.getInt("ID"),
-//                            resultSet.getString("username"),
-//                            resultSet.getString("password"),
-//                            resultSet.getString("role")
-//                    );
-//                }
-//                resultSet.close();
-//                preparedStatement.close();
-//                return user;
-//            }catch(SQLException e) {
-//                throw new RuntimeException(e);
-//            }finally {
-//                if(connection!=null){
-//                    try {
-//                        connection.close();
-//                    } catch (SQLException e) {
-//                        throw new RuntimeException("Couldn't close the connection");
-//                    }
-//                }
-//            }
-//        }
     }
 }
 

@@ -10,8 +10,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class UserCustom implements UserDetails {
+import static java.util.Arrays.asList;
 
+public class UserCustom implements UserDetails {
     private String username;
     private String password;
     private String role;
@@ -22,9 +23,7 @@ public class UserCustom implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(role));
-        return !authorities.isEmpty() ? authorities : null;
+        return asList(new SimpleGrantedAuthority(role));
     }
 
 
