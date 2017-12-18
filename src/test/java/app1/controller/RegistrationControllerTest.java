@@ -76,7 +76,7 @@ public class RegistrationControllerTest {
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
     @Test
-    public void shouldReturnSignUpViewWithErrors() throws Exception {
+    public void shouldReturnSignUpViewWithErrorFieldRequired() throws Exception {
         mockMvc.perform(post("/signup").param("username","").param("password",""))
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(view().name("signup"))
@@ -86,7 +86,7 @@ public class RegistrationControllerTest {
     }
     @Test
     @WithUserDetails(value = "Artur")
-    public void shouldReturnSignUpViewWithErrors5555() throws Exception {
+    public void shouldReturnSignUpViewWithErrorUserExist() throws Exception {
         mockMvc.perform(post("/signup").param("username","Artur").param("password","Artur"))
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(view().name("signup"))

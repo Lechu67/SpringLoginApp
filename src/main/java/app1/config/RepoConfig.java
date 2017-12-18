@@ -21,22 +21,6 @@ import javax.sql.DataSource;
 @PropertySource("classpath:application.properties")
 public class RepoConfig {
 
-    /*For information:
-        -application.properties should be in ressource !
-        -there are two ways of getting value from file application.propeties
-            -Using @Value(${}) on a field
-            -(RECOMMENDED BY SPRING) Using the environnement class, which must be injected: here @Autowired or @Resource works
-        -The class where we use values from application.properties must be annotated with @PropertySource*/
-
-    /*@Value("${datasource.url}")
-    private String DB_URL;
-    @Value("${datasource.username}")
-    private String DB_USER;
-    @Value("${datasource.password}")
-    private String DB_PASSWORD;
-    @Value("${datasource.driver-class-name}")
-    private String DB_DRIVER;*/
-
     private static final String DB_DRIVER = "datasource.driver-class-name";
     private static final String DB_URL = "datasource.url";
     private static final String DB_USER = "datasource.username";
