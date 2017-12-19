@@ -1,27 +1,20 @@
 package app1.model;
 
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import static java.util.Arrays.asList;
 
 public class UserCustom implements UserDetails {
-
-
     private String username;
     private String password;
-
     private String role;
 
     public UserCustom() {
@@ -30,9 +23,7 @@ public class UserCustom implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(role));
-        return !authorities.isEmpty() ? authorities : null;
+        return asList(new SimpleGrantedAuthority(role));
     }
 
 

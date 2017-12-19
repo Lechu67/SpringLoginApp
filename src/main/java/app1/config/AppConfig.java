@@ -22,13 +22,6 @@ public class AppConfig implements WebMvcConfigurer {
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.jsp().prefix("WEB-INF/view/");
     }
-//    @Bean
-//    public MessageSource messageSource() {
-//        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-//        messageSource.setBasename("/WEB-INF/messages");
-//        return messageSource;
-//    }
-
     @Bean
     public Validator validator(){
         return new UserValidator();

@@ -34,7 +34,6 @@ public class UserValidator implements Validator {
     }
 
     private boolean isUserExists(String userName) {
-        UserCustom byName = userDAO.findByName(userName);
-        return byName != null;
+        return userDAO.findByName(userName) != null;
     }
 }
