@@ -15,16 +15,9 @@ import org.springframework.web.bind.annotation.*;
 public class RegistrationController {
 
     private final UserDetailService service;
-
     private final Validator validator;
 
-    /*@Autowired
-    private UserDetailService service;
-
     @Autowired
-    private Validator validator;*/
-
-    @Autowired //which way better ?
     public RegistrationController(UserDetailService service, Validator validator) {
         this.service = service;
         this.validator = validator;
