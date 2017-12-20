@@ -1,8 +1,10 @@
 package app1.controller;
 
-import app1.model.UserCustom;
+import app1.model.UserEntity;
 import app1.service.UserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -29,8 +31,8 @@ public class RegistrationController {
     }
 
     @ModelAttribute("usercustom")
-    public UserCustom createUserModel() {
-        return new UserCustom();
+    public UserEntity createUserModel() {
+        return new UserEntity();
     }
 
     @RequestMapping(value = "/signup", method = RequestMethod.GET)
@@ -40,13 +42,13 @@ public class RegistrationController {
 
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
     public String addUser(
-            @ModelAttribute("usercustom") @Validated UserCustom userCustom,
+            @ModelAttribute("usercustom") @Validated UserEntity userEntity,
             BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             return "signup";
         }
-        service.addUser(userCustom);
+        service.addUser(userEntity);
         return "redirect:/";
     }
 }

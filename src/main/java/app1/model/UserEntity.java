@@ -19,8 +19,8 @@ public class UserEntity implements UserDetails {
     @Column(name = "password")
     private String password;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "username")
-    private Set<Role>  roles = new HashSet<Role>(0);
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user",targetEntity = UserRole.class)
+    private Set<UserRole>  roles = new HashSet<UserRole>(0);
 
     public UserEntity() {
     }
@@ -28,14 +28,20 @@ public class UserEntity implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-       /* for(Role role : getRoles()) {
+        Set<SimpleGrantedAuthority> authorities = new HashSet<>();
+        /*for(UserRole role : getRoles()) {
             authorities.add(new SimpleGrantedAuthority(role.getRole()));
         }*/
         roles.forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRole())));
-        return !authorities.isEmpty() ? authorities : null;
+        return authorities;
+    }
+    public Set<UserRole> getRoles() {
+        return roles;
     }
 
+    public void setRoles(Set<UserRole> roles) {
+        this.roles = roles;
+    }
 
     public void setPassword(String password) {
         this.password = password;

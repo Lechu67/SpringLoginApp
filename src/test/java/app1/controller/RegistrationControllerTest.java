@@ -5,6 +5,7 @@ import app1.config.RepoConfig;
 import app1.config.ServiceConfig;
 import app1.config.WebSecurityConfig;
 import app1.model.UserCustom;
+import app1.model.UserEntity;
 import app1.service.UserDetailService;
 import org.junit.Before;
 import org.junit.Test;
@@ -96,11 +97,11 @@ public class RegistrationControllerTest {
     @Test
     public void shouldReturnSignUpViewWhenHasError() throws Exception {
         when(bindingResultMock.hasErrors()).thenReturn(true);
-        assertEquals("signup",controller.addUser(new UserCustom(), bindingResultMock));
+        assertEquals("signup",controller.addUser(new UserEntity(), bindingResultMock));
     }
     @Test
     public void shouldReturnRedirectToRootWhenNoError() throws Exception {
-        UserCustom user = new UserCustom();
+        UserEntity user = new UserEntity();
         when(bindingResultMock.hasErrors()).thenReturn(false);
         String result = controller.addUser(user, bindingResultMock);
         verify(service).addUser(eq(user));

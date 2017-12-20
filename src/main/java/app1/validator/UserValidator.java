@@ -1,6 +1,7 @@
 package app1.validator;
 
 import app1.model.UserCustom;
+import app1.model.UserEntity;
 import app1.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ public class UserValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> clazz) {
-        return UserCustom.class.equals(clazz);
+        return UserEntity.class.equals(clazz);
     }
 
     @Override
@@ -26,7 +27,7 @@ public class UserValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace
                 (errors, "password", "password.empty", "Required");
 
-        UserCustom targetUser = (UserCustom) target;
+        UserEntity targetUser = (UserEntity) target;
 
         if (isUserExists(targetUser.getUsername())) {
             errors.rejectValue("username", "username.exist", "User already exist");

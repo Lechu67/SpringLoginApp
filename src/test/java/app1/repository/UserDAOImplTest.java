@@ -45,14 +45,14 @@ public class UserDAOImplTest {
         Object[] args = {userCustom.getUsername(), userCustom.getPassword(), userCustom.getAuthorities().toString()};
 
         when(jdbcTemplateMock.update(sql, args)).thenReturn(1);
-        userDAO.insert(userCustom);
+        //POPRAW userDAO.insert(userCustom);
 
         verify(jdbcTemplateMock).update(sql, new Object[]{"test", "test", "[test]"});
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowAnIllegalArgumentWhenUserParamIsNull() {
-        userDAO.insert(userCustom2);
+        //POPRAW userDAO.insert(userCustom2);
     }
     @Test
     public void shouldFindOneMatchingRow(){

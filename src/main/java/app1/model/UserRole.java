@@ -1,22 +1,31 @@
 package app1.model;
 
 
+
+
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "roles")
-public class Role {
+public class UserRole {
 
     @Id
     @Column(name = "ID")
     private int id;
-
     @Column(name = "role")
     private String role;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY/*,targetEntity = UserEntity.class*/)
     @JoinColumn(name = "username")
-    private String username;
+    private UserEntity user;
+
+    public UserRole() {
+    }
+
+    public UserRole(String role, UserEntity user) {
+        this.role = role;
+        this.user = user;
+    }
 
 
     public int getId() {
@@ -26,7 +35,6 @@ public class Role {
     public void setId(int id) {
         this.id = id;
     }
-
     public String getRole() {
         return role;
     }
@@ -35,11 +43,11 @@ public class Role {
         this.role = role;
     }
 
-    public String getUsername() {
-        return username;
+    public UserEntity getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 }

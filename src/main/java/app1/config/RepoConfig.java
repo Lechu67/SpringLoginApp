@@ -7,21 +7,19 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.util.Properties;
 
 
 @Configuration
 @ComponentScan("app1.repository")
-@EnableTransactionManagement
+@EnableTransactionManagement(proxyTargetClass = true)
 @PropertySource("classpath:application.properties")
 public class RepoConfig {
 
@@ -42,36 +40,28 @@ public class RepoConfig {
         dataSource.setPassword(environment.getProperty(DB_PASSWORD));
         return dataSource;
     }
- /*   @Bean
-    public PlatformTransactionManager transactionManager(DataSource dataSource){
-        return new DataSourceTransactionManager(dataSource);
-    }
-    @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource){
-        return new JdbcTemplate(dataSource);
-    }*/
 
     @Bean
-    public LocalSessionFactoryBean sessionFactoryBean(DataSource dataSource){
+    public SessionFactory sessionFactoryBean(DataSource dataSource) throws IOException {
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         localSessionFactoryBean.setDataSource(dataSource);
+//        localSessionFactoryBean.setAnnotatedClasses(UserEntity.class, UserRole.class);
         localSessionFactoryBean.setPackagesToScan(new String[]{"app1.model"});
         localSessionFactoryBean.setHibernateProperties(hibernateProperties());
-        return localSessionFactoryBean;
+        localSessionFactoryBean.afterPropertiesSet();
+        return localSessionFactoryBean.getObject();
     }
 
     private Properties hibernateProperties() {
         Properties properties = new Properties();
-        //properties.put("hibernate.dialect", environment.getProperty("hibernate.dialect"));
-        properties.put("hibernate.show_sql",environment.getRequiredProperty("hibernate.show_sql"));
-       // properties.put("hibernate.format_sql",environment.getRequiredProperty("hibernate.format_sql"));
+        properties.put("hibernate.dialect", environment.getProperty("hibernate.dialect"));
+        properties.put("hibernate.show_sql",environment.getProperty("hibernate.show_sql"));
+        properties.put("hibernate.format_sql",environment.getProperty("hibernate.format_sql"));
         return properties;
     }
     @Bean
     @Autowired
     public HibernateTransactionManager transactionManager(SessionFactory sessionFactory){
-        HibernateTransactionManager manager = new HibernateTransactionManager();
-        manager.setSessionFactory(sessionFactory);
-        return manager;
+        return new HibernateTransactionManager(sessionFactory);
     }
 }

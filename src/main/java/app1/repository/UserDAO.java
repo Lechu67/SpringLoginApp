@@ -1,10 +1,10 @@
 package app1.repository;
 
-import app1.model.UserCustom;
-import org.springframework.security.core.userdetails.UserDetails;
+import app1.model.UserEntity;
 
 public interface UserDAO {
 
-    void insert(UserDetails user);
-    UserCustom findByName(String username);
+    void insert(UserEntity userEntity);
+    UserEntity findByName(String username);
+   // List<String> getUserRoles(String username);
 }

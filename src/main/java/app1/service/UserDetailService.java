@@ -1,7 +1,7 @@
 package app1.service;
 
 
-import app1.model.UserCustom;
+import app1.model.UserRole;
 import app1.model.UserEntity;
 import app1.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +11,13 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
+@Transactional
 public class UserDetailService implements UserDetailsService {
 
     @Autowired
@@ -27,17 +32,29 @@ public class UserDetailService implements UserDetailsService {
         if (user== null) {
             throw new UsernameNotFoundException(userName);
         }
-        return toUserDetails(user);
+        Set<UserRole> roles = new HashSet<>();
+        for (UserRole role : user.getRoles()) {
+            roles.add(new UserRole(role.getRole(),user));
+        }
+        user.setRoles(roles);
+        UserDetails userDetails = new User(user.getUsername(),user.getPassword(),user.getAuthorities());
+
+        return userDetails;
     }
-    public void addUser(UserCustom user){
-        user.setRole("USER");
+    public void addUser(UserEntity user){
+
+        Set<UserRole> roles = new HashSet<>();
+        roles.add(new UserRole("ROLE_USER",user));
+        user.setRoles(roles);
         user.setPassword(encoder.encode(user.getPassword()));
-        userDAO.insert(toUserDetails(user));
+//        UserDetails userDetails = new User(user.getUsername(),user.getPassword(),user.getAuthorities());
+        userDAO.insert(user);
     }
-    private UserDetails toUserDetails(UserEntity userEntity){
+ /*   private UserDetails toUserDetails(UserEntity userEntity, List<GrantedAuthority> authorities){
         return User.withUsername(userEntity.getUsername())
                 .password(userEntity.getPassword())
-                .roles(role
+                .roles(authorities)
                 .build();
-    }
+    }*/
+
 }
