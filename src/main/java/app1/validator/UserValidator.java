@@ -5,11 +5,13 @@ import app1.model.UserEntity;
 import app1.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 @Component
+@Transactional
 public class UserValidator implements Validator {
 
     @Autowired

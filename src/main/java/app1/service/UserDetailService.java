@@ -4,6 +4,7 @@ package app1.service;
 import app1.model.UserRole;
 import app1.model.UserEntity;
 import app1.repository.UserDAO;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,6 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -49,6 +51,7 @@ public class UserDetailService implements UserDetailsService {
         user.setPassword(encoder.encode(user.getPassword()));
 //        UserDetails userDetails = new User(user.getUsername(),user.getPassword(),user.getAuthorities());
         userDAO.insert(user);
+        System.out.println(TransactionSynchronizationManager.isActualTransactionActive());
     }
  /*   private UserDetails toUserDetails(UserEntity userEntity, List<GrantedAuthority> authorities){
         return User.withUsername(userEntity.getUsername())

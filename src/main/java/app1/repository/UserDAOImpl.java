@@ -2,26 +2,32 @@ package app1.repository;
 
 
 import app1.model.UserEntity;
+import app1.model.UserRole;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 
 import java.util.List;
 
 
 @Repository
-@Transactional
+@Transactional/*(propagation = Propagation.MANDATORY)*/
 public class UserDAOImpl implements UserDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
 
+
     @Override
     public void insert(UserEntity userEntity) {
         getSession().save(userEntity);
+        for (UserRole userRole : userEntity.getRoles()) {
+            getSession().save(new UserRole(userRole.getRole(), userEntity));
+        }
     }
     @Override
     public UserEntity findByName(String username) {
@@ -40,6 +46,7 @@ public class UserDAOImpl implements UserDAO {
         return roles;
     }*/
     private Session getSession(){
+        System.out.println(TransactionSynchronizationManager.isActualTransactionActive());
         return sessionFactory.getCurrentSession();
     }
 }
