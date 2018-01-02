@@ -29,9 +29,6 @@ public class UserEntity implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
-        /*for(UserRole role : getRoles()) {
-            authorities.add(new SimpleGrantedAuthority(role.getRole()));
-        }*/
         roles.forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRole())));
         return authorities;
     }

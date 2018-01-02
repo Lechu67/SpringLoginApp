@@ -10,18 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94a2159-f9eb-402f-9981-d2c7dd765262" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java" afterPath="$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/model/UserRole.java" afterPath="$PROJECT_DIR$/src/main/java/app1/model/UserRole.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" afterPath="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
-      <change beforePath="$PROJECT_DIR$/test1.iml" afterPath="$PROJECT_DIR$/test1.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,7 +71,7 @@
       <file leaf-file-name="UserDetailService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="0">
               <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
@@ -90,8 +81,8 @@
       <file leaf-file-name="UserDAOImplTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="380">
+              <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,31 +90,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="229">
+              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepoConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java">
+      <file leaf-file-name="UserRole.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserRole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -193,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/main/java/app1/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/config/AppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/repository/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" />
@@ -204,9 +184,10 @@
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserRole.java" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
       </list>
     </option>
   </component>
@@ -459,10 +440,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -523,7 +504,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDAOImplTest.testAdd">
+  <component name="RunManager" selected="JUnit.UserDAOImplTest.shouldAddAUserToH2Db">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -558,6 +539,31 @@
       <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="app1.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="test1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="app1.repository" />
+      <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
+      <option name="METHOD_NAME" value="shouldAddAUserToH2Db" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -632,31 +638,6 @@
       <option name="PACKAGE_NAME" value="app1.service" />
       <option name="MAIN_CLASS_NAME" value="app1.service.UserDetailServiceTest" />
       <option name="METHOD_NAME" value="shouldReturnAnInstanceOfUserDetail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="UserDetailServiceTest.shouldReturnUserNotFoundException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="app1.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="test1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app1.service" />
-      <option name="MAIN_CLASS_NAME" value="app1.service.UserDetailServiceTest" />
-      <option name="METHOD_NAME" value="shouldReturnUserNotFoundException" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -817,18 +798,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnUserNotFoundException" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldInertAddUserWithCorrectParam" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.testAdd" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldInertAddUserWithCorrectParam" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.testAdd" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAddAUserToH2Db" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.testAdd" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldInertAddUserWithCorrectParam" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnUserNotFoundException" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAddAUserToH2Db" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.testAdd" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldInertAddUserWithCorrectParam" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" />
       </list>
     </recent_temporary>
   </component>
@@ -873,7 +854,8 @@
       <workItem from="1514927658706" duration="1579000" />
       <workItem from="1514929755726" duration="1782000" />
       <workItem from="1514931592020" duration="1718000" />
-      <workItem from="1514933475017" duration="91000" />
+      <workItem from="1514933475017" duration="1759000" />
+      <workItem from="1514935286689" duration="330000" />
     </task>
     <task id="LOCAL-00001" summary="add zad8">
       <created>1513685300273</created>
@@ -896,30 +878,37 @@
       <option name="project" value="LOCAL" />
       <updated>1513863538638</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add h2 db for testing">
+      <created>1514933624896</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1514933624896</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDAOImplTest_testAdd - 2018.01.02 at 23h 01m 38s.xml">
-      <configuration name="UserDAOImplTest.testAdd" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 22m 14s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_testAdd - 2018.01.02 at 23h 09m 17s.xml">
-      <configuration name="UserDAOImplTest.testAdd" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 23m 17s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_testAdd - 2018.01.02 at 23h 16m 48s.xml">
-      <configuration name="UserDAOImplTest.testAdd" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 24m 18s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_testAdd - 2018.01.02 at 23h 17m 17s.xml">
-      <configuration name="UserDAOImplTest.testAdd" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 24m 36s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_testAdd - 2018.01.02 at 23h 29m 54s.xml">
-      <configuration name="UserDAOImplTest.testAdd" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 25m 22s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_testAdd - 2018.01.02 at 23h 48m 59s.xml">
-      <configuration name="UserDAOImplTest.testAdd" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 25m 56s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDetailServiceTest_shouldInertAddUserWithCorrectParam - 2017.12.21 at 16h 17m 53s.xml">
-      <configuration name="UserDetailServiceTest.shouldInertAddUserWithCorrectParam" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 26m 18s.xml">
+      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserDetailServiceTest_shouldReturnAnInstanceOfUserDetail - 2017.12.21 at 16h 11m 34s.xml">
       <configuration name="UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" configurationId="JUnit" />
@@ -932,7 +921,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242083000" />
+    <option name="totallyTimeSpent" value="244081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -948,18 +937,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38726333" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38709676" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32702237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38709676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38709676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28975534" sideWeight="0.51754385" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34515196" sideWeight="0.48245615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35238785" sideWeight="0.48245615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -968,7 +958,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32702237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295107" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40953717" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1012,7 +1001,8 @@
     <MESSAGE value="add zad8" />
     <MESSAGE value="in work" />
     <MESSAGE value="add zad8_vBeta" />
-    <option name="LAST_COMMIT_MESSAGE" value="add zad8_vBeta" />
+    <MESSAGE value="add h2 db for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add h2 db for testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1025,19 +1015,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java</url>
-          <line>35</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java</url>
-          <line>34</line>
+          <line>31</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -1045,7 +1029,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java</url>
-          <line>38</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1055,11 +1039,23 @@
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="19" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1370,18 +1366,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,6 +1385,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,41 +1396,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="80" lean-forward="false" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserRole.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="419">
+          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1453,18 +1420,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="80" lean-forward="false" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="380">
+          <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
