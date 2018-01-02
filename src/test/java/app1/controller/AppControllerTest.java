@@ -40,8 +40,8 @@ public class AppControllerTest {
 
 
     @Test
-    //@WithMockUser(username = "Leszek")
-    @WithUserDetails(value = "Leszek")
+    @WithMockUser(username = "Leszek")
+//    @WithUserDetails(value = "Leszek")
     public void shouldReturnLoginViewWithTheRightUserAttribute() throws Exception {
         mockMvc.perform(get("/")).andExpect(status().isOk())
                 .andExpect(request().attribute("user","Leszek"))

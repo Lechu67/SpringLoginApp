@@ -73,9 +73,8 @@ public class RegistrationControllerTest {
     @Test
     public void shouldReturnLoginViewWithTheRightUserAttribute() throws Exception {
         mockMvc.perform(post("/signup").param("username","Waldek").param("password","pass"))
-                .andExpect(status().is2xxSuccessful())
-                .andExpect(view().name("signup"))
-                .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
+                .andExpect(status().is3xxRedirection())
+                .andExpect(view().name("redirect:/"));
     }
     @Test
     public void shouldReturnSignUpViewWithErrorFieldRequired() throws Exception {
@@ -87,9 +86,9 @@ public class RegistrationControllerTest {
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
     @Test
-//    @WithUserDetails(value = "Artur")
+    @WithMockUser(value = "Heniek")
     public void shouldReturnSignUpViewWithErrorUserExist() throws Exception {
-        mockMvc.perform(post("/signup").param("username","Artur").param("password","Artur"))
+        mockMvc.perform(post("/signup").param("username","Heniek").param("password","Heniek"))
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(view().name("signup"))
                 .andExpect(model().attributeHasFieldErrorCode("usercustom","username","username.exist"))

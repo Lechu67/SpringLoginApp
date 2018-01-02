@@ -9,10 +9,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java" line="12" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f94a2159-f9eb-402f-9981-d2c7dd765262" name="Default" comment="">
+    <list default="true" id="f94a2159-f9eb-402f-9981-d2c7dd765262" name="Default" comment="add dao tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,40 +73,28 @@
       <file leaf-file-name="UserDetailService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="221">
               <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAOImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
+      <file leaf-file-name="UserDetailServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRole.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserRole.java">
+      <file leaf-file-name="RegistrationControllerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="-102">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,7 +156,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/298039d1-c05d-443c-9536-22e8ede9b795/console.sql" />
         <option value="$PROJECT_DIR$/src/test/java/controller/AppControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserCustomRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserHiber.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/Role.java" />
@@ -174,20 +163,21 @@
         <option value="$PROJECT_DIR$/src/main/java/app1/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/config/AppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/repository/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserRole.java" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/app1/config/RepoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java" />
       </list>
     </option>
   </component>
@@ -263,6 +253,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -434,16 +427,22 @@
               <item name="zad7_1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app1" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zad7_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zad7_1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,7 +503,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDAOImplTest.shouldAddAUserToH2Db">
+  <component name="RunManager" selected="JUnit.RegistrationControllerTest.shouldReturnLoginViewWithTheRightUserAttribute">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -525,18 +524,38 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="UserDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="test1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RegistrationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="app1.repository.*" />
+          <option name="PATTERN" value="app1.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="test1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app1.repository" />
-      <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
+      <option name="PACKAGE_NAME" value="app1.controller" />
+      <option name="MAIN_CLASS_NAME" value="app1.controller.RegistrationControllerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -550,19 +569,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationControllerTest.shouldReturnLoginViewWithTheRightUserAttribute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="app1.repository.*" />
+          <option name="PATTERN" value="app1.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="test1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app1.repository" />
-      <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
-      <option name="METHOD_NAME" value="shouldAddAUserToH2Db" />
+      <option name="PACKAGE_NAME" value="app1.controller" />
+      <option name="MAIN_CLASS_NAME" value="app1.controller.RegistrationControllerTest" />
+      <option name="METHOD_NAME" value="shouldReturnLoginViewWithTheRightUserAttribute" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -575,19 +594,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserDAOImplTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationControllerTest.shouldReturnSignUpViewWithErrorUserExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="app1.repository.*" />
+          <option name="PATTERN" value="app1.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="test1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app1.repository" />
-      <option name="MAIN_CLASS_NAME" value="app1.repository.UserDAOImplTest" />
-      <option name="METHOD_NAME" value="testAdd" />
+      <option name="PACKAGE_NAME" value="app1.controller" />
+      <option name="MAIN_CLASS_NAME" value="app1.controller.RegistrationControllerTest" />
+      <option name="METHOD_NAME" value="shouldReturnSignUpViewWithErrorUserExist" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -600,7 +619,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserDetailServiceTest.shouldInertAddUserWithCorrectParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDetailServiceTest.shouldAddUserWithCorrectParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="app1.service.*" />
@@ -612,32 +631,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="app1.service" />
       <option name="MAIN_CLASS_NAME" value="app1.service.UserDetailServiceTest" />
-      <option name="METHOD_NAME" value="shouldInertAddUserWithCorrectParam" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="app1.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="test1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app1.service" />
-      <option name="MAIN_CLASS_NAME" value="app1.service.UserDetailServiceTest" />
-      <option name="METHOD_NAME" value="shouldReturnAnInstanceOfUserDetail" />
+      <option name="METHOD_NAME" value="shouldAddUserWithCorrectParam" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -797,19 +791,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldInertAddUserWithCorrectParam" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.testAdd" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAddAUserToH2Db" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldAddUserWithCorrectParam" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All in test1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.shouldReturnLoginViewWithTheRightUserAttribute" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.shouldReturnSignUpViewWithErrorUserExist" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.shouldAddAUserToH2Db" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest.testAdd" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldInertAddUserWithCorrectParam" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.shouldReturnLoginViewWithTheRightUserAttribute" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in test1" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.shouldReturnSignUpViewWithErrorUserExist" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserDetailServiceTest.shouldAddUserWithCorrectParam" />
       </list>
     </recent_temporary>
   </component>
@@ -855,7 +849,8 @@
       <workItem from="1514929755726" duration="1782000" />
       <workItem from="1514931592020" duration="1718000" />
       <workItem from="1514933475017" duration="1759000" />
-      <workItem from="1514935286689" duration="330000" />
+      <workItem from="1514935286689" duration="1774000" />
+      <workItem from="1514937114299" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="add zad8">
       <created>1513685300273</created>
@@ -885,43 +880,50 @@
       <option name="project" value="LOCAL" />
       <updated>1514933624896</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add dao tests">
+      <created>1514935641090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514935641091</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 22m 14s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="All_in_test1 - 2018.01.03 at 00h 57m 03s.xml">
+      <configuration name="All in test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 23m 17s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest - 2018.01.03 at 00h 57m 20s.xml">
+      <configuration name="RegistrationControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 24m 18s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest - 2018.01.03 at 00h 57m 49s.xml">
+      <configuration name="RegistrationControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 24m 36s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_shouldReturnLoginViewWithTheRightUserAttribute - 2018.01.03 at 00h 57m 33s.xml">
+      <configuration name="RegistrationControllerTest.shouldReturnLoginViewWithTheRightUserAttribute" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 25m 22s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_shouldReturnLoginViewWithTheRightUserAttribute - 2018.01.03 at 00h 58m 56s.xml">
+      <configuration name="RegistrationControllerTest.shouldReturnLoginViewWithTheRightUserAttribute" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 25m 56s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_shouldReturnSignUpViewWithErrorUserExist - 2018.01.03 at 00h 55m 42s.xml">
+      <configuration name="RegistrationControllerTest.shouldReturnSignUpViewWithErrorUserExist" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_shouldAddAUserToH2Db - 2018.01.03 at 00h 26m 18s.xml">
-      <configuration name="UserDAOImplTest.shouldAddAUserToH2Db" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_shouldReturnSignUpViewWithErrorUserExist - 2018.01.03 at 00h 56m 17s.xml">
+      <configuration name="RegistrationControllerTest.shouldReturnSignUpViewWithErrorUserExist" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDetailServiceTest_shouldReturnAnInstanceOfUserDetail - 2017.12.21 at 16h 11m 34s.xml">
-      <configuration name="UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" configurationId="JUnit" />
+    <history-entry file="UserValidatorTest - 2018.01.03 at 00h 43m 54s.xml">
+      <configuration name="UserValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDetailServiceTest_shouldReturnAnInstanceOfUserDetail - 2017.12.21 at 16h 14m 55s.xml">
-      <configuration name="UserDetailServiceTest.shouldReturnAnInstanceOfUserDetail" configurationId="JUnit" />
+    <history-entry file="UserValidatorTest_shouldSupportOnlyUserCutstomClass - 2018.01.03 at 00h 44m 31s.xml">
+      <configuration name="UserValidatorTest.shouldSupportOnlyUserCutstomClass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDetailServiceTest_shouldReturnUserNotFoundException - 2017.12.21 at 16h 09m 26s.xml">
-      <configuration name="UserDetailServiceTest.shouldReturnUserNotFoundException" configurationId="JUnit" />
+    <history-entry file="UserValidatorTest_shouldSupportOnlyUserCutstomClass - 2018.01.03 at 00h 45m 55s.xml">
+      <configuration name="UserValidatorTest.shouldSupportOnlyUserCutstomClass" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244081000" />
+    <option name="totallyTimeSpent" value="245970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -944,12 +946,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38709676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38709676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28975534" sideWeight="0.51754385" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35238785" sideWeight="0.48245615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25904486" sideWeight="0.48245615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1002,7 +1004,8 @@
     <MESSAGE value="in work" />
     <MESSAGE value="add zad8_vBeta" />
     <MESSAGE value="add h2 db for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="add h2 db for testing" />
+    <MESSAGE value="add dao tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dao tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1055,7 +1058,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="21" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1113,13 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1358,37 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/javax/annotation/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1400,7 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,15 +1380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,41 +1387,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="80" lean-forward="false" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserRole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="521">
+          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app1/repository/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="249">
           <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/app1/repository/UserDAOImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+        <state relative-caret-position="419">
+          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/AppControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/validator/UserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/validator/UserValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app1/service/UserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/service/UserDetailServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app1/controller/RegistrationControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

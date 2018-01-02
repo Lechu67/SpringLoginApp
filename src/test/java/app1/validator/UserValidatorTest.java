@@ -1,11 +1,10 @@
 package app1.validator;
 
 import app1.model.UserCustom;
-import app1.repository.UserDAO;
+import app1.model.UserEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.junit.Assert.*;
@@ -19,7 +18,7 @@ public class UserValidatorTest {
 
     @Test
     public void shouldSupportOnlyUserCutstomClass(){
-        assertTrue(validator.supports(UserCustom.class));
+        assertTrue(validator.supports(UserEntity.class));
         assertFalse(validator.supports(String.class));
     }
 }

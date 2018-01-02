@@ -38,12 +38,7 @@ public class UserDetailServiceTest {
     @Mock
     private UserDAO dao;
 
-    @Mock
-    private UserBuilder userBuilder;
-
-
     private UserEntity userEntity;
-    //private UserDetails userDetails;
 
     @Mock
     private BCryptPasswordEncoder encoder;
@@ -52,11 +47,9 @@ public class UserDetailServiceTest {
     public void setup(){
         MockitoAnnotations.initMocks(this);
         mockStatic(User.class);
-        //userDetails = new UserEntity();
         userEntity = new UserEntity();
         userEntity.setUsername("test");
         userEntity.setPassword("test");
-//        userEntity.setRole("USER");
     }
 
     @Test(expected = UsernameNotFoundException.class)
@@ -79,7 +72,7 @@ public class UserDetailServiceTest {
         when(encoder.encode(userEntity.getPassword())).thenReturn(expectedPassword);
         service.addUser(userEntity);
 
-//        assertEquals("USER", userEntity.getRole());
+        assertEquals("[ROLE_USER]", userEntity.getAuthorities().toString());
         assertEquals(expectedPassword, userEntity.getPassword());
         verify(dao).insert(userEntity);
     }
