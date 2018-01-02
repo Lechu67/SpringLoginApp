@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -86,7 +87,7 @@ public class RegistrationControllerTest {
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
     @Test
-    @WithUserDetails(value = "Artur")
+//    @WithUserDetails(value = "Artur")
     public void shouldReturnSignUpViewWithErrorUserExist() throws Exception {
         mockMvc.perform(post("/signup").param("username","Artur").param("password","Artur"))
                 .andExpect(status().is2xxSuccessful())

@@ -43,7 +43,7 @@ public class UserDetailServiceTest {
 
 
     private UserEntity userEntity;
-    private UserDetails userDetails;
+    //private UserDetails userDetails;
 
     @Mock
     private BCryptPasswordEncoder encoder;
@@ -52,7 +52,7 @@ public class UserDetailServiceTest {
     public void setup(){
         MockitoAnnotations.initMocks(this);
         mockStatic(User.class);
-        userDetails = new UserEntity();
+        //userDetails = new UserEntity();
         userEntity = new UserEntity();
         userEntity.setUsername("test");
         userEntity.setPassword("test");
@@ -69,30 +69,18 @@ public class UserDetailServiceTest {
     @Test
     public void shouldReturnAnInstanceOfUserDetail(){
         String user = "andrzej";
-        userBuilderMock();
         when(dao.findByName(user)).thenReturn(userEntity);
         assertThat(service.loadUserByUsername(user),instanceOf(UserDetails.class));
     }
     @Test
-    public void shouldInertAddUserWithCorrectParam(){
+    public void shouldAddUserWithCorrectParam(){
         String expectedPassword = "test";
-
-        userBuilderMock();
 
         when(encoder.encode(userEntity.getPassword())).thenReturn(expectedPassword);
         service.addUser(userEntity);
 
 //        assertEquals("USER", userEntity.getRole());
         assertEquals(expectedPassword, userEntity.getPassword());
-        //POPRAW verify(dao).insert(userDetails);
+        verify(dao).insert(userEntity);
     }
-
-    private void userBuilderMock() {
-        when(User.withUsername(userEntity.getUsername())).thenReturn(userBuilder);
-        when(userBuilder.password(userEntity.getPassword())).thenReturn(userBuilder);
-//        when(userBuilder.roles(userEntity.getRole())).thenReturn(userBuilder);
-        when(userBuilder.build()).thenReturn(userDetails);
-    }
-
-
 }

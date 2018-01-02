@@ -40,7 +40,6 @@ public class UserDetailService implements UserDetailsService {
         }
         user.setRoles(roles);
         UserDetails userDetails = new User(user.getUsername(),user.getPassword(),user.getAuthorities());
-
         return userDetails;
     }
     public void addUser(UserEntity user){
@@ -49,15 +48,6 @@ public class UserDetailService implements UserDetailsService {
         roles.add(new UserRole("ROLE_USER",user));
         user.setRoles(roles);
         user.setPassword(encoder.encode(user.getPassword()));
-//        UserDetails userDetails = new User(user.getUsername(),user.getPassword(),user.getAuthorities());
         userDAO.insert(user);
-        System.out.println(TransactionSynchronizationManager.isActualTransactionActive());
     }
- /*   private UserDetails toUserDetails(UserEntity userEntity, List<GrantedAuthority> authorities){
-        return User.withUsername(userEntity.getUsername())
-                .password(userEntity.getPassword())
-                .roles(authorities)
-                .build();
-    }*/
-
 }

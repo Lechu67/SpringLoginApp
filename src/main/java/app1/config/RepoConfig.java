@@ -45,7 +45,6 @@ public class RepoConfig {
     public SessionFactory sessionFactoryBean(DataSource dataSource) throws IOException {
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         localSessionFactoryBean.setDataSource(dataSource);
-//        localSessionFactoryBean.setAnnotatedClasses(UserEntity.class, UserRole.class);
         localSessionFactoryBean.setPackagesToScan(new String[]{"app1.model"});
         localSessionFactoryBean.setHibernateProperties(hibernateProperties());
         localSessionFactoryBean.afterPropertiesSet();
@@ -57,6 +56,7 @@ public class RepoConfig {
         properties.put("hibernate.dialect", environment.getProperty("hibernate.dialect"));
         properties.put("hibernate.show_sql",environment.getProperty("hibernate.show_sql"));
         properties.put("hibernate.format_sql",environment.getProperty("hibernate.format_sql"));
+        properties.put("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
         return properties;
     }
     @Bean

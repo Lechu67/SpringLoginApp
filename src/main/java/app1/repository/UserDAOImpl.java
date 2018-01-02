@@ -31,20 +31,12 @@ public class UserDAOImpl implements UserDAO {
     }
     @Override
     public UserEntity findByName(String username) {
-
         List<UserEntity> user = getSession()
                 .createQuery("from UserEntity where username=?")
                 .setParameter(0,username)
                 .list();
         return user.size() > 0 ? user.get(0) : null;
     }
- /*   public List<String> getUserRoles(String username){
-        List<String> roles = getSession()
-                .createQuery("select role from UserRole where username=?")
-                .setParameter(0, username)
-                .list();
-        return roles;
-    }*/
     private Session getSession(){
         System.out.println(TransactionSynchronizationManager.isActualTransactionActive());
         return sessionFactory.getCurrentSession();
