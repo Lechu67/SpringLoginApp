@@ -30,6 +30,4 @@ public class AppController {
     public String adminView() {
         return "admin";
     }
-
-
 }

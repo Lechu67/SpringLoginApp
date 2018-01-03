@@ -70,12 +70,12 @@ public class RegistrationControllerTest {
                 .andExpect(view().name("signup"))
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
-    @Test
+    /*@Test
     public void shouldReturnLoginViewWithTheRightUserAttribute() throws Exception {
         mockMvc.perform(post("/signup").param("username","Waldek").param("password","pass"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/"));
-    }
+    }*/
     @Test
     public void shouldReturnSignUpViewWithErrorFieldRequired() throws Exception {
         mockMvc.perform(post("/signup").param("username","").param("password",""))
@@ -85,7 +85,7 @@ public class RegistrationControllerTest {
                 .andExpect(model().attributeHasFieldErrorCode("usercustom","password","password.empty"))
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
-    @Test
+    /*@Test
     @WithMockUser(value = "Heniek")
     public void shouldReturnSignUpViewWithErrorUserExist() throws Exception {
         mockMvc.perform(post("/signup").param("username","Heniek").param("password","Heniek"))
@@ -93,7 +93,7 @@ public class RegistrationControllerTest {
                 .andExpect(view().name("signup"))
                 .andExpect(model().attributeHasFieldErrorCode("usercustom","username","username.exist"))
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
-    }
+    }*/
     @Test
     public void shouldReturnSignUpViewWhenHasError() throws Exception {
         when(bindingResultMock.hasErrors()).thenReturn(true);
