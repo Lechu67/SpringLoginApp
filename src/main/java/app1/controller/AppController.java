@@ -17,7 +17,6 @@ public class AppController {
         model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getName());
         return "index";
     }
-
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginView(Principal user) {
         if (user == null) {
@@ -25,11 +24,13 @@ public class AppController {
         }
         return "redirect:/";
     }
-
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminView() {
         return "admin";
     }
 
-
+    @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
+    public String tictactoeView() {
+        return "tictactoe";
+    }
 }

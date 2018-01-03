@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Home</h2>
 <br>
 Hello ${user}
 <c:url value="/logout" var="logoutUrl"/>
@@ -10,5 +10,7 @@ Hello ${user}
     <button type="submit" class="btn">Log out</button>
 </form>
     <a href="/admin">Admin Page</a>
+    <br>
+    <a href="/tictactoe">Play Tic-Tac-Toe</a>
 </body>
 </html>
