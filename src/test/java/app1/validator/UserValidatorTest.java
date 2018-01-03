@@ -1,6 +1,5 @@
 package app1.validator;
 
-import app1.model.UserCustom;
 import app1.model.UserEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;

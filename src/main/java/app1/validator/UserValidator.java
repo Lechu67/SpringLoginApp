@@ -1,6 +1,5 @@
 package app1.validator;
 
-import app1.model.UserCustom;
 import app1.model.UserEntity;
 import app1.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;

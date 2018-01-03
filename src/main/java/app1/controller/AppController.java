@@ -28,9 +28,4 @@ public class AppController {
     public String adminView() {
         return "admin";
     }
-
-    @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
-    public String tictactoeView() {
-        return "tictactoe";
-    }
 }
