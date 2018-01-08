@@ -3,8 +3,8 @@ package app1.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "moves")
-public class Moves {
+@Table(name = "move")
+public class Move {
 
     @Id
     @Column(name = "id")
@@ -16,13 +16,21 @@ public class Moves {
     @Column(name = "column")
     private int column;
 
-    @Column(name = "game_id")
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "game_id")
     private int gameID;
 
     @Column(name = "symbol")
     private char userSymbol;
 
-    public Moves() {
+    public Move() {
+    }
+
+    public Move(int row, int column, int gameID, char userSymbol) {
+        this.row = row;
+        this.column = column;
+        this.gameID = gameID;
+        this.userSymbol = userSymbol;
     }
 
     public int getId() {

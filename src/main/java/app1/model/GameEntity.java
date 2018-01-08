@@ -7,10 +7,10 @@ import javax.persistence.*;
 public class GameEntity {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "game_id")
     private int id;
 
-    @Column(name = "dimension")
+//    @Column(name = "dimension")
     private int dimension;
 
     @Column(name = "symbol")
@@ -26,6 +26,11 @@ public class GameEntity {
     public GameEntity() {
     }
 
+    public GameEntity(char userSymbol, boolean isUserNextMove, UserEntity user) {
+        this.userSymbol = userSymbol;
+        this.isUserNextMove = isUserNextMove;
+        this.user = user;
+    }
 
     public int getId() {
         return id;

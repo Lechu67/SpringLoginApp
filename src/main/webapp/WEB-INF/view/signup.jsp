@@ -24,18 +24,5 @@
             </tr>
         </table>
     </springForm:form>
-<%--<c:url value="/signup" var="signupUrl"/>
-<form action="${signupUrl}" method="post">
-    <p>
-        <label for="username">Enter Username</label>
-        <input type="text" id="username" name="username"/>
-        <form:errors path="username" cssClass="error"/>
-    </p>
-    <p>
-        <label for="password">Enter Password</label>
-        <input type="password" id="password" name="password"/>
-    </p>
-    <button type="submit" class="btn">Signup</button>
-</form>--%>
 </body>
 </html>

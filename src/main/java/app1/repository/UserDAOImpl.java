@@ -38,7 +38,6 @@ public class UserDAOImpl implements UserDAO {
         return user.size() > 0 ? user.get(0) : null;
     }
     private Session getSession(){
-        System.out.println(TransactionSynchronizationManager.isActualTransactionActive());
         return sessionFactory.getCurrentSession();
     }
 }

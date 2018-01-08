@@ -44,7 +44,6 @@ public class UserEntity implements UserDetails {
         this.password = password;
     }
 
-
     @Override
     public String getPassword() {
         return this.password;
