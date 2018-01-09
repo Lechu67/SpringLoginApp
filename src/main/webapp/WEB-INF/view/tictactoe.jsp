@@ -25,8 +25,22 @@ $(document).ready(function(){
                     console.log("Response: success, data = " + data);
                     $(element.target).text(data.symbol)
 
-                    if(data.status == 1) {
-                        //alert win
+                    switch(data.status){
+                        case TAKEN:
+                            alert("Field already taken!");
+                            break;
+                        case ISFREE:
+                            break;
+                        case CONTINUE:
+                            break;
+                        case WIN:
+                            break;
+                        case DRAW:
+                            break;
+                    }
+
+                    if(data.status == "TAKEN") {
+                        alert("Field already taken!");
                     } else if(data.status == 2) {
                         //
                     } else if (data.status == 3){

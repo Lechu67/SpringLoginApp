@@ -21,16 +21,16 @@ public class Move {
     private int gameID;
 
     @Column(name = "symbol")
-    private char userSymbol;
+    private char symbol;
 
     public Move() {
     }
 
-    public Move(int row, int column, int gameID, char userSymbol) {
+    public Move(int row, int column, int gameID, char symbol) {
         this.row = row;
         this.column = column;
         this.gameID = gameID;
-        this.userSymbol = userSymbol;
+        this.symbol = symbol;
     }
 
     public int getId() {
@@ -65,11 +65,11 @@ public class Move {
         this.gameID = gameID;
     }
 
-    public char getUserSymbol() {
-        return userSymbol;
+    public char getSymbol() {
+        return symbol;
     }
 
-    public void setUserSymbol(char userSymbol) {
-        this.userSymbol = userSymbol;
+    public void setSymbol(char symbol) {
+        this.symbol = symbol;
     }
 }

@@ -1,8 +1,6 @@
 package app1.controller;
 
-import app1.model.GameStatus;
-import app1.model.MoveRequest;
-import app1.model.MoveResponse;
+import app1.model.*;
 import app1.service.BoardService;
 import app1.service.GameService;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,14 +19,14 @@ public class TicTacToeController {
 
     @RequestMapping(value = "/newGame", method = RequestMethod.POST)
     public String newGameView(@RequestParam("symbol") char symbol) {
-        gameService.makeNewGame(symbol);
+        gameService.createNewGame(symbol);
         return "tictactoe";
     }
 
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     public String tictactoeView() {
-        if (gameService.findGameByUser(SecurityContextHolder.getContext().getAuthentication().getName()) == null){
+        if (gameService.loadGameByUserName(SecurityContextHolder.getContext().getAuthentication().getName()) == null){
             return "newGame";
         }
         return "tictactoe";
@@ -38,11 +36,25 @@ public class TicTacToeController {
     @ResponseBody
     public MoveResponse getMoveRequest(@RequestBody MoveRequest moveRequest) {
 
-        if(!boardService.checkIfBoardCellAvailable(moveRequest)){
-//            return...
+        GameEntity currentGameEntity =
+                gameService.loadGameByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
+        Move move = createMove(moveRequest,currentGameEntity);
+
+        if(!boardService.checkIfBoardCellAvailable(move)){
+            return new MoveResponse(GameStatus.TAKEN, "X");
         }
+        boardService.saveNewMove(move);
         return new MoveResponse(GameStatus.ISFREE, "X");
-//        return "tictactoe";
+    }
+
+    private Move createMove(MoveRequest moveRequest, GameEntity gameEntity) {
+
+        Move move = new Move();
+        move.setColumn(moveRequest.getX());
+        move.setRow(moveRequest.getY());
+        move.setGameID(gameEntity.getId());
+        move.setSymbol(gameEntity.getUserSymbol());
+        return move;
     }
 
 }
