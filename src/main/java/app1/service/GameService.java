@@ -11,9 +11,9 @@ public class GameService {
 //    @Autowired
     private GameDAO gameDAO;
 
-    public void createNewGame(char symbol){
+    public void createNewGame(char userSymbol){
         UserEntity currentUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        GameEntity gameEntity = new GameEntity(symbol, true, currentUser);
+        GameEntity gameEntity = new GameEntity(userSymbol, true, currentUser);
         gameDAO.saveNewGame(gameEntity);
     }
     public GameEntity loadGameByUserName(String userName){

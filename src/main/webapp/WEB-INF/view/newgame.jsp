@@ -7,8 +7,8 @@
 <c:url value="/tictactoe" var="tictactoeUrl"/>
 <form action="${tictactoeUrl}" method="post">
     <p>
-        <label for="symbol">User Symbol:</label>
-        <input type="text" id="symbol" name="symbol"/>
+        <label for="user_symbol">User Symbol:</label>
+        <input type="text" id="user_symbol" name="user_symbol"/>
         <button type="submit" class="btn">New game</button>
     </p>
 </form>

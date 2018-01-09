@@ -18,8 +18,8 @@ public class TicTacToeController {
     private GameService gameService;
 
     @RequestMapping(value = "/newGame", method = RequestMethod.POST)
-    public String newGameView(@RequestParam("symbol") char symbol) {
-        gameService.createNewGame(symbol);
+    public String newGameView(@RequestParam("user_symbol") char userSymbol) {
+        gameService.createNewGame(userSymbol);
         return "tictactoe";
     }
 
@@ -39,12 +39,13 @@ public class TicTacToeController {
         GameEntity currentGameEntity =
                 gameService.loadGameByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
         Move move = createMove(moveRequest,currentGameEntity);
-
+//who is playing ??
         if(!boardService.checkIfBoardCellAvailable(move)){
             return new MoveResponse(GameStatus.TAKEN, "X");
         }
         boardService.saveNewMove(move);
-        return new MoveResponse(GameStatus.ISFREE, "X");
+        GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
+        return new MoveResponse(gameStatus, "X");
     }
 
     private Move createMove(MoveRequest moveRequest, GameEntity gameEntity) {
