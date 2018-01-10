@@ -10,11 +10,11 @@ public class Move {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "col")
+    private int column;
+
     @Column(name = "row")
     private int row;
-
-    @Column(name = "column")
-    private int column;
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "game_id")
@@ -26,7 +26,7 @@ public class Move {
     public Move() {
     }
 
-    public Move(int row, int column, int gameID, char symbol) {
+    public Move(int column,int row, int gameID, char symbol) {
         this.row = row;
         this.column = column;
         this.gameID = gameID;

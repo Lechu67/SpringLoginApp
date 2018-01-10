@@ -2,12 +2,10 @@ package app1.model;
 
 public class MoveResponse {
 
-    //1 - win, 2 - continue game
     private GameStatus status;
+    private char symbol;
 
-    private String symbol;
-
-    public MoveResponse(GameStatus status, String symbol) {
+    public MoveResponse(GameStatus status, char symbol) {
         this.status = status;
         this.symbol = symbol;
     }
@@ -20,11 +18,11 @@ public class MoveResponse {
         this.status = status;
     }
 
-    public String getSymbol() {
+    public char getSymbol() {
         return symbol;
     }
 
-    public void setSymbol(String symbol) {
+    public void setSymbol(char symbol) {
         this.symbol = symbol;
     }
 }

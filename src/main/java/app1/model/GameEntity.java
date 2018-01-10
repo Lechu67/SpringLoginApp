@@ -10,9 +10,6 @@ public class GameEntity {
     @Column(name = "game_id")
     private int id;
 
-//    @Column(name = "dimension")
-    private int dimension;
-
     @Column(name = "symbol")
     private char userSymbol;
 
@@ -23,13 +20,25 @@ public class GameEntity {
     @JoinColumn(name = "username")
     private UserEntity user;
 
+    @Column(name = "dimension")
+    private int dimension;
+
     public GameEntity() {
     }
 
-    public GameEntity(char userSymbol, boolean isUserNextMove, UserEntity user) {
+    public GameEntity(char userSymbol, boolean isUserNextMove, UserEntity user, int dimension) {
         this.userSymbol = userSymbol;
         this.isUserNextMove = isUserNextMove;
         this.user = user;
+        this.dimension=dimension;
+    }
+
+    public boolean isUserNextMove() {
+        return isUserNextMove;
+    }
+
+    public void setUserNextMove(boolean userNextMove) {
+        isUserNextMove = userNextMove;
     }
 
     public int getId() {

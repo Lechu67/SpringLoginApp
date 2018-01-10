@@ -5,18 +5,25 @@ import app1.model.Move;
 import app1.model.UserEntity;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-//@Repository
+@Repository
 public class GameDAOImpl implements GameDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
-    public boolean isMoveExists(Move move) {
-        return false;
+    public boolean isMovePossible(Move move) {
+        return sessionFactory.getCurrentSession()
+                .createQuery("from Move where x=?0, y=?1 and game_id=?2")
+                .setParameter(0,move.getColumn())
+                .setParameter(1,move.getRow())
+                .setParameter(2,move.getGameID())
+                .list()
+                .isEmpty();
     }
 
     @Override
@@ -41,7 +48,12 @@ public class GameDAOImpl implements GameDAO {
 
     @Override
     public GameEntity findGameByUserName(String userName) {
-        return null;
+        GameEntity gameEntity = (GameEntity) sessionFactory.getCurrentSession()
+                .createQuery("from GameEntity where username=?")
+                .setParameter(0,userName)
+                .list()
+                .get(0);
+        return gameEntity;
     }
 
 

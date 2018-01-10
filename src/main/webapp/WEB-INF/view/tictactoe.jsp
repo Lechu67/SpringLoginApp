@@ -23,34 +23,26 @@ $(document).ready(function(){
                 contentType: "application/json; ; charset=UTF-8",
                 success : function(data){
                     console.log("Response: success, data = " + data);
-                    $(element.target).text(data.symbol)
+
 
                     switch(data.status){
                         case TAKEN:
                             alert("Field already taken!");
                             break;
-                        case ISFREE:
-                            break;
                         case CONTINUE:
+                            $(element.target).text(data.symbol);
                             break;
                         case WIN:
+                            alert("wins");
                             break;
                         case DRAW:
+                            alert("It's a draw !");
                             break;
                     }
-
-                    if(data.status == "TAKEN") {
-                        alert("Field already taken!");
-                    } else if(data.status == 2) {
-                        //
-                    } else if (data.status == 3){
-
-                    }
-
                 },
                 error : function(){
                     console.log("Response: error");
-                    alert("Field already taken !");
+                    alert("An error occured");
                 },
                 data : JSON.stringify(moveRequest)
             });

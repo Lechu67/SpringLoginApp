@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface GameDAO {
 
-    boolean isMoveExists(Move move);
+    boolean isMovePossible(Move move);
 
     List<Move> findMovesByGameId(int gameId);
 
