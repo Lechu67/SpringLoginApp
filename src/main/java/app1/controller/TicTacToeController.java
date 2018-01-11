@@ -18,17 +18,19 @@ public class TicTacToeController {
     @Autowired
     private GameService gameService;
 
-    @RequestMapping(value = "/newGame", method = RequestMethod.POST)
-    public String newGameView(@RequestParam("user_symbol") char userSymbol) {
+
+    /*@RequestMapping(value = "/newGame", method = RequestMethod.POST,headers = {??}, cosumes= ??)
+    public String createGame(@RequestParam("user_symbol") String userSymbol) {
         gameService.createNewGame(userSymbol);
         return "tictactoe";
-    }
+    }*/
 
 
-    @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
+    @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
         if (gameService.loadGameByUserName(SecurityContextHolder.getContext().getAuthentication().getName()) == null){
-            return "newGame";
+            gameService.createNewGame("X");
+//            return "newGame";
         }
         return "tictactoe";
     }

@@ -32,7 +32,8 @@ public class GameDAOImpl implements GameDAO {
                 .createQuery("from Move where game_id=?")
                 .setParameter(0,gameId)
                 .list();
-        return moves.size() > 0 ? moves : null;
+        return moves;
+//        return moves.size() > 0 ? moves : null;
     }
 
 
@@ -48,12 +49,11 @@ public class GameDAOImpl implements GameDAO {
 
     @Override
     public GameEntity findGameByUserName(String userName) {
-        GameEntity gameEntity = (GameEntity) sessionFactory.getCurrentSession()
+        List<GameEntity> gameEntity = sessionFactory.getCurrentSession()
                 .createQuery("from GameEntity where username=?")
                 .setParameter(0,userName)
-                .list()
-                .get(0);
-        return gameEntity;
+                .list();
+        return gameEntity.size() > 0 ? gameEntity.get(0) : null;
     }
 
 

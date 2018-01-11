@@ -1,6 +1,7 @@
 package app1.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "game")
@@ -9,6 +10,9 @@ public class GameEntity {
     @Id
     @Column(name = "game_id")
     private int id;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "gameID",targetEntity = Move.class)
+    private Set<Integer> moves;
 
     @Column(name = "symbol")
     private char userSymbol;
@@ -31,6 +35,14 @@ public class GameEntity {
         this.isUserNextMove = isUserNextMove;
         this.user = user;
         this.dimension=dimension;
+    }
+
+    public Set<Integer> getMoves() {
+        return moves;
+    }
+
+    public void setMoves(Set<Integer> moves) {
+        this.moves = moves;
     }
 
     public boolean isUserNextMove() {

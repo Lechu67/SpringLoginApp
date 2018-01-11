@@ -16,8 +16,8 @@ public class Move {
     @Column(name = "row")
     private int row;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "game_id")
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = GameEntity.class)
+    @JoinColumn(name = "game_id")
     private int gameID;
 
     @Column(name = "symbol")

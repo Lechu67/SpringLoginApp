@@ -16,4 +16,6 @@ public interface GameDAO {
     void saveNewGame(GameEntity gameEntity);
 
     GameEntity findGameByUserName(String userName);
+
+    //deleteGame
 }

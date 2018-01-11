@@ -11,6 +11,6 @@ Hello ${user}
 </form>
     <a href="/admin">Admin Page</a>
     <br>
-    <a href="/tictactoe">Play Tic-Tac-Toe</a>
+    <a href="/newGame">Play Tic-Tac-Toe</a>
 </body>
 </html>

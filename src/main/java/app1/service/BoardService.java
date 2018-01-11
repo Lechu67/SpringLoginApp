@@ -5,14 +5,18 @@ import app1.model.GameStatus;
 import app1.model.Move;
 import app1.repository.GameDAO;
 import app1.winStrategy.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//@Service
+@Service
+@Transactional
 public class BoardService {
 
-    //@Autowired
+    @Autowired
     private GameDAO gameDAO;
 
     public boolean isBoardCellAvailable(Move move){

@@ -26,17 +26,17 @@ $(document).ready(function(){
 
 
                     switch(data.status){
-                        case TAKEN:
+                        case 'TAKEN':
                             alert("Field already taken!");
                             break;
-                        case CONTINUE:
-                            $(element.target).text(data.symbol);
-                            break;
-                        case WIN:
+                        case 'WIN':
                             alert("wins");
                             break;
-                        case DRAW:
+                        case 'DRAW':
                             alert("It's a draw !");
+                            break;
+                        case 'CONTINUE':
+                            $(element.target).text(data.symbol);
                             break;
                     }
                 },
@@ -73,9 +73,9 @@ table {
 <h2>Tic tac toe</h2>
 
 <table>
-<c:forEach var = "row" begin = "1" end = "3">
+<c:forEach var = "row" begin = "0" end = "2">
    <tr>
-       <c:forEach var = "col" begin = "1" end = "3">
+       <c:forEach var = "col" begin = "0" end = "2">
           <td id="test" x = "${col}" y = "${row}"></td>
         </c:forEach>
     </tr>
