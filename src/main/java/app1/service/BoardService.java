@@ -45,7 +45,7 @@ public class BoardService {
         Move computerMove = new Move(
                 x,
                 y,
-                gameEntity.getId(),
+                gameEntity,
                 'O');
         return computerMove;
     }

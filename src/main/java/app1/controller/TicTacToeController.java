@@ -49,7 +49,7 @@ public class TicTacToeController {
             move = new Move(
                     moveRequest.getX(),
                     moveRequest.getY(),
-                    currentGameEntity.getId(),
+                    currentGameEntity,
                     currentGameEntity.getUserSymbol());
             if(!boardService.isBoardCellAvailable(move)){
                 return new MoveResponse(GameStatus.TAKEN, move.getSymbol());

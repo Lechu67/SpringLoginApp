@@ -21,7 +21,7 @@ public class GameDAOImpl implements GameDAO {
                 .createQuery("from Move where x=?0, y=?1 and game_id=?2")
                 .setParameter(0,move.getColumn())
                 .setParameter(1,move.getRow())
-                .setParameter(2,move.getGameID())
+                .setParameter(2,move.getGame())
                 .list()
                 .isEmpty();
     }
