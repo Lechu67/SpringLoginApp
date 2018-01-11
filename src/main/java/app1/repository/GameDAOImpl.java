@@ -2,7 +2,6 @@ package app1.repository;
 
 import app1.model.GameEntity;
 import app1.model.Move;
-import app1.model.UserEntity;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -18,7 +17,7 @@ public class GameDAOImpl implements GameDAO {
     @Override
     public boolean isMovePossible(Move move) {
         return sessionFactory.getCurrentSession()
-                .createQuery("from Move where x=?0, y=?1 and game_id=?2")
+                .createQuery("from Move where col=?0 and row=?1 and game_id=?2")
                 .setParameter(0,move.getColumn())
                 .setParameter(1,move.getRow())
                 .setParameter(2,move.getGame())
@@ -40,6 +39,11 @@ public class GameDAOImpl implements GameDAO {
     @Override
     public void saveNewMove(Move move) {
         sessionFactory.getCurrentSession().save(move);
+    }
+
+    @Override
+    public void updateGame(GameEntity gameEntity) {
+        sessionFactory.getCurrentSession().update(gameEntity);
     }
 
     @Override

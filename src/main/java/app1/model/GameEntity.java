@@ -11,9 +11,6 @@ public class GameEntity {
     @Column(name = "game_id")
     private Integer id;
 
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "gameID",targetEntity = Move.class)
-//    private Set<Move> moves;
-
     @Column(name = "symbol")
     private char userSymbol;
 
@@ -36,14 +33,6 @@ public class GameEntity {
         this.user = user;
         this.dimension=dimension;
     }
-
-//    public Set<Move> getMoves() {
-//        return moves;
-//    }
-//
-//    public void setMoves(Set<Move> moves) {
-//        this.moves = moves;
-//    }
 
     public boolean isUserNextMove() {
         return isUserNextMove;

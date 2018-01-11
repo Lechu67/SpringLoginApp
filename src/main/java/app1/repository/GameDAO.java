@@ -13,6 +13,8 @@ public interface GameDAO {
 
     void saveNewMove(Move move);
 
+    void updateGame(GameEntity gameEntity);
+
     void saveNewGame(GameEntity gameEntity);
 
     GameEntity findGameByUserName(String userName);

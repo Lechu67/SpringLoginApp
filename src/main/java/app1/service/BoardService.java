@@ -27,7 +27,8 @@ public class BoardService {
         gameDAO.saveNewMove(move);
     }
     public void changePlayer(GameEntity gameEntity){
-         gameEntity.setUserNextMove(!gameEntity.isUserNextMove());
+        gameEntity.setUserNextMove(!gameEntity.isUserNextMove());
+        gameDAO.updateGame(gameEntity);
     }
     public Move makeComputerMove(GameEntity gameEntity){
 
@@ -86,7 +87,8 @@ public class BoardService {
         for (WinStrategy winStrategy : winStrategies){
             winner = winStrategy.isWin(board);
         }
-        return winner;
+        return winner == '\u0000' ? null : winner;
+
     }
     private char[][] prepareAndPopulateBoard(GameEntity gameEntity){
 

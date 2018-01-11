@@ -4,7 +4,7 @@ public class VerticalWinStrategy implements WinStrategy {
     @Override
     public Character isWin(char[][] board) {
 
-        for (int col = 0; col < board[col].length ; col++){
+        for (int col = 0; col < board.length ; col++){
             char symbol = board[0][col];
             for (int row = 1; row < board.length ; row++){
                 char nextSymbol = board[row][col];
