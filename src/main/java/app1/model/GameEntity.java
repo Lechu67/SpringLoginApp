@@ -9,10 +9,10 @@ public class GameEntity {
 
     @Id
     @Column(name = "game_id")
-    private int id;
+    private Integer id;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "gameID",targetEntity = Move.class)
-    private Set<Integer> moves;
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "gameID",targetEntity = Move.class)
+//    private Set<Move> moves;
 
     @Column(name = "symbol")
     private char userSymbol;
@@ -37,13 +37,13 @@ public class GameEntity {
         this.dimension=dimension;
     }
 
-    public Set<Integer> getMoves() {
-        return moves;
-    }
-
-    public void setMoves(Set<Integer> moves) {
-        this.moves = moves;
-    }
+//    public Set<Move> getMoves() {
+//        return moves;
+//    }
+//
+//    public void setMoves(Set<Move> moves) {
+//        this.moves = moves;
+//    }
 
     public boolean isUserNextMove() {
         return isUserNextMove;
@@ -53,11 +53,11 @@ public class GameEntity {
         isUserNextMove = userNextMove;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

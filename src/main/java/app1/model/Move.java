@@ -18,7 +18,7 @@ public class Move {
 
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = GameEntity.class)
     @JoinColumn(name = "game_id")
-    private int gameID;
+    private GameEntity game;
 
     @Column(name = "symbol")
     private char symbol;
@@ -26,10 +26,10 @@ public class Move {
     public Move() {
     }
 
-    public Move(int column,int row, int gameID, char symbol) {
+    public Move(int column,int row, GameEntity gameEntity, char symbol) {
         this.row = row;
         this.column = column;
-        this.gameID = gameID;
+        this.game = gameEntity;
         this.symbol = symbol;
     }
 
@@ -57,12 +57,12 @@ public class Move {
         this.column = column;
     }
 
-    public int getGameID() {
-        return gameID;
+    public GameEntity getGame() {
+        return game;
     }
 
-    public void setGameID(int gameID) {
-        this.gameID = gameID;
+    public void setGame(GameEntity game) {
+        this.game = game;
     }
 
     public char getSymbol() {
