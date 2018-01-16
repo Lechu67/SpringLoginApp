@@ -74,7 +74,12 @@ public class TicTacToeController {
 
         boardService.saveNewMove(move);
         GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
-        boardService.changePlayer(currentGameEntity);
+        if(gameStatus!=GameStatus.WIN){
+            boardService.changePlayer(currentGameEntity);
+        }else {
+            boardService.removeGame(currentGameEntity);
+        }
+
         return new MoveResponse(gameStatus,move.getSymbol());
     }
 }

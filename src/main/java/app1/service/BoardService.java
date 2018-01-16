@@ -107,4 +107,7 @@ public class BoardService {
         return board;
     }
 
+    public void removeGame(GameEntity currentGameEntity) {
+        gameDAO.removeGameWithMoves(currentGameEntity);
+    }
 }

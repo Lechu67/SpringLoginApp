@@ -19,5 +19,5 @@ public interface GameDAO {
 
     GameEntity findGameByUserName(String userName);
 
-    //deleteGame
+    void removeGameWithMoves(GameEntity currentGameEntity);
 }

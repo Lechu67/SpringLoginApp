@@ -17,10 +17,10 @@ public class GameDAOImpl implements GameDAO {
     @Override
     public boolean isMovePossible(Move move) {
         return sessionFactory.getCurrentSession()
-                .createQuery("from Move where col=?0 and row=?1 and game_id=?2")
-                .setParameter(0,move.getColumn())
-                .setParameter(1,move.getRow())
-                .setParameter(2,move.getGame())
+                .createQuery("from Move where column=?1 and row=?2 and game=?3")
+                .setParameter(1,move.getColumn())
+                .setParameter(2,move.getRow())
+                .setParameter(3,move.getGame())
                 .list()
                 .isEmpty();
     }
@@ -28,7 +28,7 @@ public class GameDAOImpl implements GameDAO {
     @Override
     public List<Move> findMovesByGameId(int gameId) {
         List<Move> moves = sessionFactory.getCurrentSession()
-                .createQuery("from Move where game_id=?")
+                .createQuery("from Move where game=?")
                 .setParameter(0,gameId)
                 .list();
         return moves;
@@ -54,10 +54,19 @@ public class GameDAOImpl implements GameDAO {
     @Override
     public GameEntity findGameByUserName(String userName) {
         List<GameEntity> gameEntity = sessionFactory.getCurrentSession()
-                .createQuery("from GameEntity where username=?")
+                .createQuery("from GameEntity where user=?")
                 .setParameter(0,userName)
                 .list();
         return gameEntity.size() > 0 ? gameEntity.get(0) : null;
+    }
+
+    @Override
+    public void removeGameWithMoves(GameEntity currentGameEntity) {
+        sessionFactory.getCurrentSession().delete(currentGameEntity);
+        sessionFactory.getCurrentSession()
+                .createQuery("delete from Move m where m.game=?1")
+                .setParameter(1,currentGameEntity.getId())
+                .executeUpdate();
     }
 
 
