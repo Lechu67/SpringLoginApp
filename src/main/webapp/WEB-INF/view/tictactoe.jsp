@@ -51,6 +51,7 @@ $(document).ready(function(){
                         case 'DRAW':
                             $(element.target).text(data.symbol);
                             alert("It's a draw !");
+                            window.location.replace("/")
                             break;
                         case 'CONTINUE':
                             $(element.target).text(data.symbol);
