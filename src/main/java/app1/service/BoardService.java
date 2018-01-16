@@ -98,7 +98,7 @@ public class BoardService {
     private char[][] prepareAndPopulateBoard(GameEntity gameEntity){
 
         char[][] board = new char[gameEntity.getDimension()][gameEntity.getDimension()];
-        List<Move> moves = gameDAO.findMovesByGameId(gameEntity.getId());
+        List<Move> moves = gameDAO.findMovesByGameId(gameEntity);
         moves.forEach(m -> {
             int x = m.getColumn();
             int y = m.getRow();

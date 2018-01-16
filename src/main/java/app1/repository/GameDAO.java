@@ -2,6 +2,7 @@ package app1.repository;
 
 import app1.model.GameEntity;
 import app1.model.Move;
+import app1.model.UserEntity;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface GameDAO {
 
     boolean isMovePossible(Move move);
 
-    List<Move> findMovesByGameId(int gameId);
+    List<Move> findMovesByGameId(GameEntity gameEntity);
 
     void saveNewMove(Move move);
 
@@ -17,7 +18,7 @@ public interface GameDAO {
 
     void saveNewGame(GameEntity gameEntity);
 
-    GameEntity findGameByUserName(String userName);
+    GameEntity findGameByUserName(UserEntity userEntity);
 
     void removeGameWithMoves(GameEntity currentGameEntity);
 }

@@ -2,6 +2,7 @@ package app1.repository;
 
 import app1.model.GameEntity;
 import app1.model.Move;
+import app1.model.UserEntity;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -26,10 +27,10 @@ public class GameDAOImpl implements GameDAO {
     }
 
     @Override
-    public List<Move> findMovesByGameId(int gameId) {
+    public List<Move> findMovesByGameId(GameEntity gameEntity) {
         List<Move> moves = sessionFactory.getCurrentSession()
                 .createQuery("from Move where game=?")
-                .setParameter(0,gameId)
+                .setParameter(0,gameEntity)
                 .list();
         return moves;
 //        return moves.size() > 0 ? moves : null;
@@ -52,10 +53,10 @@ public class GameDAOImpl implements GameDAO {
     }
 
     @Override
-    public GameEntity findGameByUserName(String userName) {
+    public GameEntity findGameByUserName(UserEntity userEntity) {
         List<GameEntity> gameEntity = sessionFactory.getCurrentSession()
                 .createQuery("from GameEntity where user=?")
-                .setParameter(0,userName)
+                .setParameter(0,userEntity)
                 .list();
         return gameEntity.size() > 0 ? gameEntity.get(0) : null;
     }
@@ -64,8 +65,8 @@ public class GameDAOImpl implements GameDAO {
     public void removeGameWithMoves(GameEntity currentGameEntity) {
         sessionFactory.getCurrentSession().delete(currentGameEntity);
         sessionFactory.getCurrentSession()
-                .createQuery("delete from Move m where m.game=?1")
-                .setParameter(1,currentGameEntity.getId())
+                .createQuery("delete from Move where game=?1")
+                .setParameter(1,currentGameEntity)
                 .executeUpdate();
     }
 

@@ -4,7 +4,6 @@ import app1.model.*;
 import app1.service.BoardService;
 import app1.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +27,7 @@ public class TicTacToeController {
 
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
-        if (gameService.loadGameByUserName(SecurityContextHolder.getContext().getAuthentication().getName()) == null){
+        if (gameService.loadGameByCurrentUser() == null){
             gameService.createNewGame("X");
 //            return "newGame";
         }
@@ -45,7 +44,7 @@ public class TicTacToeController {
     public MoveResponse getMoveRequest(@RequestBody MoveRequest moveRequest) {
 
         GameEntity currentGameEntity =
-                gameService.loadGameByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
+                gameService.loadGameByCurrentUser();
 
         boolean isUserMove = currentGameEntity.isUserNextMove();
         Move move;
