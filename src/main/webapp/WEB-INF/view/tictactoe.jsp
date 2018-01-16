@@ -22,17 +22,17 @@ $(document).ready(function(){
                 type : "POST",
                 contentType: "application/json; ; charset=UTF-8",
                 success : function(data){
-                    console.log("Response: success, data = " + data);
-
 
                     switch(data.status){
                         case 'TAKEN':
                             alert("Field already taken!");
                             break;
                         case 'WIN':
-                            alert("wins");
+                            $(element.target).text(data.symbol);
+                            alert(data.symbol+" wins");
                             break;
                         case 'DRAW':
+                            $(element.target).text(data.symbol);
                             alert("It's a draw !");
                             break;
                         case 'CONTINUE':
@@ -57,14 +57,16 @@ $(document).ready(function(){
 <style>
 table, td, th {
     border: 1px solid black;
-        height: 100px;
+    height: 100px;
+
 }
-
-
 table {
     border-collapse: collapse;
     width: 20%;
     height: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-size: xx-large;
 }
 </style>
 </head>

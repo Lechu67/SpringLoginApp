@@ -8,6 +8,7 @@ import java.util.Set;
 public class GameEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "game_id")
     private Integer id;
 

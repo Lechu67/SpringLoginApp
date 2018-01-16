@@ -35,6 +35,11 @@ public class TicTacToeController {
         return "tictactoe";
     }
 
+  /*  @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
+    public String pochujmito() {
+        return "tictactoe";
+    }*/
+
     @RequestMapping(value = "/tictactoe", method = RequestMethod.POST)
     @ResponseBody
     public MoveResponse getMoveRequest(@RequestBody MoveRequest moveRequest) {
@@ -56,7 +61,15 @@ public class TicTacToeController {
             }
         }
         else {
-            move = boardService.makeComputerMove(currentGameEntity);
+//            move = boardService.makeComputerMove(currentGameEntity);
+            move = new Move(
+                    moveRequest.getX(),
+                    moveRequest.getY(),
+                    currentGameEntity,
+                    'O');
+            if(!boardService.isBoardCellAvailable(move)){
+                return new MoveResponse(GameStatus.TAKEN, move.getSymbol());
+            }
         }
 
         boardService.saveNewMove(move);

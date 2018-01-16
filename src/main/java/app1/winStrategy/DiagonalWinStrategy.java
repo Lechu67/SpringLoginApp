@@ -9,7 +9,7 @@ public class DiagonalWinStrategy implements WinStrategy {
             if(nextSymbol != board[0][0]){
                 break;
             }
-            if(i == board.length -1){
+            if(i == board.length -1 && nextSymbol!='\u0000'){
                 return nextSymbol;
             }
         }

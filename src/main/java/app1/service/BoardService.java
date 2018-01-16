@@ -48,6 +48,7 @@ public class BoardService {
                 y,
                 gameEntity,
                 'O');
+
         return computerMove;
     }
 
@@ -86,8 +87,12 @@ public class BoardService {
         Character winner = null;
         for (WinStrategy winStrategy : winStrategies){
             winner = winStrategy.isWin(board);
+            if(winner != null){
+                return winner;
+            }
         }
-        return winner == '\u0000' ? null : winner;
+        return null;
+//        return winner == '\u0000' ? null : winner;
 
     }
     private char[][] prepareAndPopulateBoard(GameEntity gameEntity){

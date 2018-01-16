@@ -11,7 +11,7 @@ public class HorizontalWinStrategy implements WinStrategy{
                 if(nextSymbol != symbol){
                     break;
                 }
-                if(col == board[row].length -1){
+                if(col == board[row].length -1 && symbol!='\u0000'){
                     return symbol;
                 }
             }
