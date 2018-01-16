@@ -34,10 +34,11 @@ public class TicTacToeController {
         return "tictactoe";
     }
 
-  /*  @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
+    @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     public String pochujmito() {
+
         return "tictactoe";
-    }*/
+    }
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.POST)
     @ResponseBody
