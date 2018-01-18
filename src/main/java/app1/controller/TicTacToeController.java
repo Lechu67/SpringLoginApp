@@ -5,7 +5,6 @@ import app1.service.BoardService;
 import app1.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -51,16 +50,16 @@ public class TicTacToeController {
         for (int col = 0; col < board[0].length ; col++){
             for (int row = 0; row < board.length ; row++){
                 if(board[col][row] != '\u0000') {
-                    currentBoard.add(new BoardResponse(col, row, board[col][row]));
+                    currentBoard.add(new BoardResponse(col, row, board[col][row])); // maybe pass info who is playing
                 }
             }
         }
         return currentBoard;
     }
 
-    @RequestMapping(value = "/tictactoe", method = RequestMethod.POST)
+    @RequestMapping(value = "/playerMove", method = RequestMethod.POST)
     @ResponseBody
-    public MoveResponse getMoveRequest(@RequestBody MoveRequest moveRequest) {
+    public MovePlayerResponse playerMove(@RequestBody MoveRequest moveRequest) {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
@@ -75,7 +74,7 @@ public class TicTacToeController {
                     currentGameEntity,
                     currentGameEntity.getUserSymbol());
             if(!boardService.isBoardCellAvailable(move)){
-                return new MoveResponse(GameStatus.TAKEN, move.getSymbol());
+                return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());
             }
         }
         else {
@@ -86,7 +85,7 @@ public class TicTacToeController {
                     currentGameEntity,
                     'O');
             if(!boardService.isBoardCellAvailable(move)){
-                return new MoveResponse(GameStatus.TAKEN, move.getSymbol());
+                return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());
             }
         }
 
@@ -98,6 +97,16 @@ public class TicTacToeController {
             boardService.changePlayer(currentGameEntity);
         }
 
-        return new MoveResponse(gameStatus,move.getSymbol());
+        return new MovePlayerResponse(gameStatus,move.getSymbol());
     }
-}
+    @RequestMapping(value = "/computerMove", method = RequestMethod.POST)
+    @ResponseBody
+    public MoveComputerResponse computerMove() {
+
+        GameEntity currentGameEntity =
+                gameService.loadGameByCurrentUser();
+//makeCOmpterMove and send it to function.
+
+        return null;
+        }
+    }

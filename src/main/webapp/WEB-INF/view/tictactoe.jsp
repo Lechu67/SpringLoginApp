@@ -42,28 +42,29 @@ table {
 
     $(document).ready(function(){
 
-
         $.ajax({
             type: "GET",
             url: "/tictactoe",
             success: function (currentBoard) {
                 $.each(currentBoard, function (i, boardResponse) {
                     $('td[x='+boardResponse.x+'][y='+boardResponse.y+']').append(boardResponse.symbol);
+                    //who is playing ?
                 })
             }
         });
         $("td").click(function(element){
             console.log($(element.target).attr("x"));
             console.log($(element.target).attr("y"));
-
+            //blokada planszy(flags, attrybut html enabled)
             var moveRequest   = {
                 x: $(element.target).attr("x"),
-                y: $(element.target).attr("y"),
+                y: $(element.target).attr("y")
             };
             $.ajax({
-                url : "/tictactoe",
+                url : "/playerMove",
                 type : "POST",
-                contentType: "application/json; ; charset=UTF-8",
+                contentType: "application/json; ; charset=UTF-8", //to co wysylam
+                data : JSON.stringify(moveRequest), //to co dostaje
                 success : function(data){
 
                     switch(data.status){
@@ -89,10 +90,37 @@ table {
                     console.log("Response: error");
                     alert("An error occured");
                 },
-                data : JSON.stringify(moveRequest)
             });
             console.log(moveRequest);
         });
+        function computerMove() {
+
+            $.ajax({
+                url : "/computerMove",
+                type : "POST",
+                contentType: "application/json; ; charset=UTF-8",
+                success : function(data){
+
+                    switch(data.status){
+                        case 'WIN':
+                            $(element.target).text(data.symbol);
+                            alert(data.symbol+" wins");
+                            window.location.replace("/")
+                            break;
+                        case 'DRAW':
+                            $(element.target).text(data.symbol);
+                            alert("It's a draw !");
+                            window.location.replace("/")
+                            break;
+
+                    }
+                },
+                error : function(){
+                    console.log("Response: error");
+                    alert("An error occured");
+                },
+            });
+        }
     });
 </script>
 

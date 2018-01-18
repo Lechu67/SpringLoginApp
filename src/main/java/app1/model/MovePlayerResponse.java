@@ -1,11 +1,11 @@
 package app1.model;
 
-public class MoveResponse {
+public class MovePlayerResponse {
 
     private GameStatus status;
     private char symbol;
 
-    public MoveResponse(GameStatus status, char symbol) {
+    public MovePlayerResponse(GameStatus status, char symbol) {
         this.status = status;
         this.symbol = symbol;
     }
