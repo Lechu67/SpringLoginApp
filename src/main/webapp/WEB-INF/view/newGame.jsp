@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
-<head>
+<head></head>>
 <h2>Tic tac toe</h2>
 <c:url value="/tictactoe" var="tictactoeUrl"/>
 <form action="${tictactoeUrl}" method="post">

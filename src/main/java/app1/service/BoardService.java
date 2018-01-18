@@ -79,8 +79,8 @@ public class BoardService {
     private Character tryGetWinner(char[][] board) {
 
         List<WinStrategy> winStrategies = new ArrayList<>();
-        winStrategies.add(new HorizontalWinStrategy());
         winStrategies.add(new VerticalWinStrategy());
+        winStrategies.add(new HorizontalWinStrategy());
         winStrategies.add(new DiagonalWinStrategy());
         winStrategies.add(new AntiDiagonalWinStrategy());
 
@@ -95,10 +95,10 @@ public class BoardService {
 //        return winner == '\u0000' ? null : winner;
 
     }
-    private char[][] prepareAndPopulateBoard(GameEntity gameEntity){
+    public char[][] prepareAndPopulateBoard(GameEntity gameEntity){
 
         char[][] board = new char[gameEntity.getDimension()][gameEntity.getDimension()];
-        List<Move> moves = gameDAO.findMovesByGameId(gameEntity);
+        List<Move> moves = gameDAO.findMovesByGame(gameEntity);
         moves.forEach(m -> {
             int x = m.getColumn();
             int y = m.getRow();

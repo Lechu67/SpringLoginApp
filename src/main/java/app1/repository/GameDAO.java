@@ -10,7 +10,7 @@ public interface GameDAO {
 
     boolean isMovePossible(Move move);
 
-    List<Move> findMovesByGameId(GameEntity gameEntity);
+    List<Move> findMovesByGame(GameEntity gameEntity);
 
     void saveNewMove(Move move);
 

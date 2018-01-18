@@ -5,7 +5,11 @@ import app1.service.BoardService;
 import app1.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
@@ -34,11 +38,42 @@ public class TicTacToeController {
         return "tictactoe";
     }
 
-    @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
-    public String pochujmito() {
+    @RequestMapping(value = "/newGame", method = RequestMethod.POST)
+    @ResponseBody
+    public List<BoardResponse> renameMe2() {
 
-        return "tictactoe";
+        GameEntity currentGameEntity =
+                gameService.loadGameByCurrentUser();
+
+        List<BoardResponse> currentBoard = new ArrayList<>();
+
+        char[][] board = boardService.prepareAndPopulateBoard(currentGameEntity);
+        for (int col = 0; col < board[0].length ; col++){
+            for (int row = 0; row < board.length ; row++){
+                if(board[col][row] != '\u0000') {
+                    currentBoard.add(new BoardResponse(col, row, board[col][row]));
+                }
+            }
+        }
+        return currentBoard;
     }
+
+//    @RequestMapping(value = "/newGame", method = RequestMethod.POST)
+//    @ResponseBody
+//    public BoardResponseList renameMe() {
+//
+//        GameEntity currentGameEntity =
+//                gameService.loadGameByCurrentUser();
+//
+//        char[][] board = boardService.prepareAndPopulateBoard(currentGameEntity);
+//        List<Character> symbols = new ArrayList<>();
+//        for (int col = 0; col < board[0].length ; col++){
+//            for (int row = 0; row < board.length ; row++){
+//                symbols.add(board[row][col]);
+//            }
+//        }
+//        return new BoardResponseList(symbols);
+//    }
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.POST)
     @ResponseBody

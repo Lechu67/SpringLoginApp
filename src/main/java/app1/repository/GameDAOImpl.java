@@ -27,7 +27,7 @@ public class GameDAOImpl implements GameDAO {
     }
 
     @Override
-    public List<Move> findMovesByGameId(GameEntity gameEntity) {
+    public List<Move> findMovesByGame(GameEntity gameEntity) {
         List<Move> moves = sessionFactory.getCurrentSession()
                 .createQuery("from Move where game=?")
                 .setParameter(0,gameEntity)

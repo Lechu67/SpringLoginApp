@@ -1,17 +1,17 @@
 package app1.winStrategy;
 
-public class HorizontalWinStrategy implements WinStrategy{
+public class HorizontalWinStrategy implements WinStrategy {
     @Override
     public Character isWin(char[][] board) {
 
-        for (int row = 0 ; row < board.length ; row++){
-            char symbol = board[row][0];
-            for (int col = 1 ; col < board[row].length ; col++){
+        for (int col = 0; col < board[0].length ; col++){
+            char symbol = board[0][col];
+            for (int row = 1; row < board.length ; row++){
                 char nextSymbol = board[row][col];
                 if(nextSymbol != symbol){
                     break;
                 }
-                if(col == board[row].length -1 && symbol!='\u0000'){
+                if(row == board.length -1 && symbol!='\u0000'){
                     return symbol;
                 }
             }
