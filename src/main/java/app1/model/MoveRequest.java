@@ -24,11 +24,4 @@ public class MoveRequest {
         this.y = y;
     }
 
-    @Override
-    public String toString() {
-        return "MoveRequest{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
-    }
 }

@@ -38,9 +38,9 @@ public class TicTacToeController {
         return "tictactoe";
     }
 
-    @RequestMapping(value = "/newGame", method = RequestMethod.POST)
+    @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     @ResponseBody
-    public List<BoardResponse> renameMe2() {
+    public List<BoardResponse> sendPopulatedBoard() {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
@@ -57,23 +57,6 @@ public class TicTacToeController {
         }
         return currentBoard;
     }
-
-//    @RequestMapping(value = "/newGame", method = RequestMethod.POST)
-//    @ResponseBody
-//    public BoardResponseList renameMe() {
-//
-//        GameEntity currentGameEntity =
-//                gameService.loadGameByCurrentUser();
-//
-//        char[][] board = boardService.prepareAndPopulateBoard(currentGameEntity);
-//        List<Character> symbols = new ArrayList<>();
-//        for (int col = 0; col < board[0].length ; col++){
-//            for (int row = 0; row < board.length ; row++){
-//                symbols.add(board[row][col]);
-//            }
-//        }
-//        return new BoardResponseList(symbols);
-//    }
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.POST)
     @ResponseBody

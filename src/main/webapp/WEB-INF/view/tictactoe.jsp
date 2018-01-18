@@ -28,7 +28,7 @@ table {
 <c:forEach var = "row" begin = "0" end = "2">
    <tr>
        <c:forEach var = "col" begin = "0" end = "2">
-          <td <%--id="${col}${row}"--%> x = "${col}" y = "${row}"></td>
+          <td x = "${col}" y = "${row}"></td>
         </c:forEach>
     </tr>
 </c:forEach>
@@ -44,22 +44,12 @@ table {
 
 
         $.ajax({
-            type: "POST",
-            url: "/newGame",
+            type: "GET",
+            url: "/tictactoe",
             success: function (currentBoard) {
                 $.each(currentBoard, function (i, boardResponse) {
                     console.log('success', boardResponse);
-
                         $('td[x="'+boardResponse.x+'"][y="'+boardResponse.y+'"]').append(boardResponse.symbol);
-
-                    // $("td").next().append(symbol);
-                    // document.getElementsByTagName("td")[i].innerHTML=symbol;
-                    // $("td").next().append(symbol);
-                    // $("td").attr("x").attr("y")
-                    // $( "td" ).attr({
-                    //     x: "Beijing Brush Seller",
-                    //     y: "photo by Kelly Clark"
-                    // });
                 })
             }
         });

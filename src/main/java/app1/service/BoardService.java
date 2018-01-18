@@ -37,7 +37,7 @@ public class BoardService {
         char[][] board = prepareAndPopulateBoard(gameEntity);
         for (int row = 0 ; row < board.length ; row++) {
             for (int col = 1; col < board[row].length; col++) {
-                if (board[row][col] == 0) {
+                if (board[row][col] == '\u0000') {
                     x = col;
                     y = row;
                 }
@@ -58,7 +58,7 @@ public class BoardService {
 
         char[][] board = prepareAndPopulateBoard(gameEntity);
         if(tryGetWinner(board) != null){
-            return GameStatus.WIN; // who wins ???
+            return GameStatus.WIN;
         } else if(checkIfDraw(board)){
             return GameStatus.DRAW;
         }else{
