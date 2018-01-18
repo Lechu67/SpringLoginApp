@@ -48,8 +48,7 @@ table {
             url: "/tictactoe",
             success: function (currentBoard) {
                 $.each(currentBoard, function (i, boardResponse) {
-                    console.log('success', boardResponse);
-                        $('td[x="'+boardResponse.x+'"][y="'+boardResponse.y+'"]').append(boardResponse.symbol);
+                    $('td[x='+boardResponse.x+'][y='+boardResponse.y+']').append(boardResponse.symbol);
                 })
             }
         });
