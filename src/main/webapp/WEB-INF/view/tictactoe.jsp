@@ -83,6 +83,7 @@ table {
                             break;
                         case 'CONTINUE':
                             $(element.target).text(data.symbol);
+                            computerMove();
                             break;
                     }
                 },
@@ -99,20 +100,22 @@ table {
                 url : "/computerMove",
                 type : "POST",
                 contentType: "application/json; ; charset=UTF-8",
-                success : function(data){
+                success : function(MoveComputerResponse){
 
-                    switch(data.status){
+                    switch(MoveComputerResponse.status){
                         case 'WIN':
-                            $(element.target).text(data.symbol);
-                            alert(data.symbol+" wins");
+                            $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
+                            alert(MoveComputerResponse.symbol+" wins");
                             window.location.replace("/")
                             break;
                         case 'DRAW':
-                            $(element.target).text(data.symbol);
+                            $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
                             alert("It's a draw !");
                             window.location.replace("/")
                             break;
-
+                        case 'CONTINUE':
+                            $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
+                            break;
                     }
                 },
                 error : function(){

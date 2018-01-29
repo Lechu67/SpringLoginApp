@@ -24,14 +24,14 @@ public class GameService {
     public void createNewGame(String userSymbol){
 
         UserEntity userEntity = getUserEntity();
-        GameEntity gameEntity = new GameEntity(userSymbol.charAt(0), getFirstPlayer(), userEntity,3);// dimension 3 by principe
+        GameEntity gameEntity = new GameEntity(userSymbol.charAt(0), isUserFirstPlayer(), userEntity,3);// dimension 3 by principe
         gameDAO.saveNewGame(gameEntity);
     }
 
     public GameEntity loadGameByCurrentUser(){
         return gameDAO.findGameByUserName(getUserEntity());
     }
-    private boolean getFirstPlayer(){
+    private boolean isUserFirstPlayer(){
         return new Random().nextBoolean();
     }
 

@@ -62,7 +62,7 @@ public class GameDAOImpl implements GameDAO {
     }
 
     @Override
-    public void removeGameWithMoves(GameEntity currentGameEntity) {
+    public void removeGameAndMoves(GameEntity currentGameEntity) {
         sessionFactory.getCurrentSession().delete(currentGameEntity);
         sessionFactory.getCurrentSession()
                 .createQuery("delete from Move where game=?1")

@@ -20,5 +20,5 @@ public interface GameDAO {
 
     GameEntity findGameByUserName(UserEntity userEntity);
 
-    void removeGameWithMoves(GameEntity currentGameEntity);
+    void removeGameAndMoves(GameEntity currentGameEntity);
 }

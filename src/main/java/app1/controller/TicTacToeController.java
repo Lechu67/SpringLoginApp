@@ -64,11 +64,8 @@ public class TicTacToeController {
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
 
-        boolean isUserMove = currentGameEntity.isUserNextMove();
-        Move move;
-
-        if(isUserMove){
-            move = new Move(
+//        boolean isUserMove = currentGameEntity.isUserNextMove();
+            Move move = new Move(
                     moveRequest.getX(),
                     moveRequest.getY(),
                     currentGameEntity,
@@ -76,18 +73,6 @@ public class TicTacToeController {
             if(!boardService.isBoardCellAvailable(move)){
                 return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());
             }
-        }
-        else {
-//            move = boardService.makeComputerMove(currentGameEntity);
-            move = new Move(
-                    moveRequest.getX(),
-                    moveRequest.getY(),
-                    currentGameEntity,
-                    'O');
-            if(!boardService.isBoardCellAvailable(move)){
-                return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());
-            }
-        }
 
         boardService.saveNewMove(move);
         GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
@@ -105,8 +90,17 @@ public class TicTacToeController {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
-//makeCOmpterMove and send it to function.
 
-        return null;
+        Move computerMove = boardService.makeComputerMove(currentGameEntity);
+
+        boardService.saveNewMove(computerMove);
+        GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
+        if(gameStatus==GameStatus.WIN || gameStatus == GameStatus.DRAW){
+            boardService.removeGame(currentGameEntity);
+        }else {
+            boardService.changePlayer(currentGameEntity);
+        }
+
+        return new MoveComputerResponse(gameStatus,'O',computerMove.getColumn(),computerMove.getRow());
         }
     }

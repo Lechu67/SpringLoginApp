@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 @Transactional
@@ -35,23 +36,17 @@ public class BoardService {
         int x = 0;
         int y = 0;
         char[][] board = prepareAndPopulateBoard(gameEntity);
-        for (int row = 0 ; row < board.length ; row++) {
-            for (int col = 1; col < board[row].length; col++) {
-                if (board[row][col] == '\u0000') {
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[row].length; col++) {
+                if (board[col][row] == '\u0000') {
                     x = col;
                     y = row;
+                    return new Move(x,y,gameEntity,'O');
                 }
             }
         }
-        Move computerMove = new Move(
-                x,
-                y,
-                gameEntity,
-                'O');
-
-        return computerMove;
+        return null;
     }
-
 
     //maybe pass size as param ?
     public GameStatus checkGameStatus(GameEntity gameEntity){
@@ -92,8 +87,6 @@ public class BoardService {
             }
         }
         return null;
-//        return winner == '\u0000' ? null : winner;
-
     }
     public char[][] prepareAndPopulateBoard(GameEntity gameEntity){
 
@@ -108,6 +101,6 @@ public class BoardService {
     }
 
     public void removeGame(GameEntity currentGameEntity) {
-        gameDAO.removeGameWithMoves(currentGameEntity);
+        gameDAO.removeGameAndMoves(currentGameEntity);
     }
 }
