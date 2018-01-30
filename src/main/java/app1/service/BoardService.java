@@ -3,6 +3,7 @@ package app1.service;
 import app1.model.GameEntity;
 import app1.model.GameStatus;
 import app1.model.Move;
+import app1.model.MoveRequest;
 import app1.repository.GameDAO;
 import app1.winStrategy.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,5 +103,13 @@ public class BoardService {
 
     public void removeGame(GameEntity currentGameEntity) {
         gameDAO.removeGameAndMoves(currentGameEntity);
+    }
+
+    public Move createMove(MoveRequest moveRequest, GameEntity gameEntity) {
+        return new Move(
+                moveRequest.getX(),
+                moveRequest.getY(),
+                gameEntity,
+                gameEntity.getUserSymbol());
     }
 }

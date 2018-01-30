@@ -18,9 +18,6 @@ public class GameService {
     @Autowired
     private GameDAO gameDAO;
 
-    @Autowired
-    private UserDetailService userDetailService;
-
     public void createNewGame(String userSymbol){
 
         UserEntity userEntity = getUserEntity();

@@ -63,7 +63,8 @@ public class RegistrationControllerTest {
     }
     @Test
     public void shouldReturnSignUpView() throws Exception {
-        mockMvc.perform(get("/signup")).andExpect(status().isOk())
+        mockMvc.perform(get("/signup"))
+                .andExpect(status().isOk())
                 .andExpect(view().name("signup"))
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }

@@ -63,24 +63,12 @@ public class TicTacToeController {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
-
 //        boolean isUserMove = currentGameEntity.isUserNextMove();
-            Move move = new Move(
-                    moveRequest.getX(),
-                    moveRequest.getY(),
-                    currentGameEntity,
-                    currentGameEntity.getUserSymbol());
+            Move move = boardService.createMove(moveRequest,currentGameEntity);
             if(!boardService.isBoardCellAvailable(move)){
                 return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());
             }
-
-        boardService.saveNewMove(move);
-        GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
-        if(gameStatus==GameStatus.WIN || gameStatus == GameStatus.DRAW){
-            boardService.removeGame(currentGameEntity);
-        }else {
-            boardService.changePlayer(currentGameEntity);
-        }
+        GameStatus gameStatus = getGameStatusAndUpdateGame(currentGameEntity, move);
 
         return new MovePlayerResponse(gameStatus,move.getSymbol());
     }
@@ -90,17 +78,21 @@ public class TicTacToeController {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
-
         Move computerMove = boardService.makeComputerMove(currentGameEntity);
+        GameStatus gameStatus = getGameStatusAndUpdateGame(currentGameEntity, computerMove);
 
-        boardService.saveNewMove(computerMove);
+        return new MoveComputerResponse(gameStatus,computerMove.getSymbol(),computerMove.getColumn(),computerMove.getRow());
+        }
+
+    private GameStatus getGameStatusAndUpdateGame(GameEntity currentGameEntity, Move move) {
+
+        boardService.saveNewMove(move);
         GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
         if(gameStatus==GameStatus.WIN || gameStatus == GameStatus.DRAW){
             boardService.removeGame(currentGameEntity);
         }else {
             boardService.changePlayer(currentGameEntity);
         }
-
-        return new MoveComputerResponse(gameStatus,'O',computerMove.getColumn(),computerMove.getRow());
-        }
+        return gameStatus;
     }
+}

@@ -50,7 +50,8 @@ public class UserDAOImplTest {
     public void prepareUser(){
         userEntity = new UserEntity();
         userEntity.setUsername("john");
-        Set<UserRole> roles = Stream.of(new UserRole("ROLE_USER",userEntity)).collect(Collectors.toCollection(HashSet::new));
+        Set<UserRole> roles =
+                Stream.of(new UserRole("ROLE_USER",userEntity)).collect(Collectors.toCollection(HashSet::new));
         userEntity.setRoles(roles);
     }
     @Test
