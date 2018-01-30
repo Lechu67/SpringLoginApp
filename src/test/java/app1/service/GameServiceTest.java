@@ -17,6 +17,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.security.Principal;
 
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -24,7 +25,7 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class GameServiceTest {
 
-    @InjectMocks
+/*    @InjectMocks
     private GameService gameService;
 
     @Mock
@@ -39,26 +40,27 @@ public class GameServiceTest {
     @Mock
     private Principal principal;
 
-    /*public void ffff(){
-        when(securityContextHolder.getContext()).thenReturn(securityContext);
-        when(securityContext.getAuthentication()).thenReturn(authentication);
-        when(authentication.getPrincipal()).thenReturn(principal);
 
-    }*/
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
     }
+
     @Test
     public void shouldCallSaveDAOMethod() {
 
         GameEntity gameEntity = new GameEntity();
-        when(securityContextHolder.getContext()).thenReturn(securityContext);
+        when(securityContextHolder.getContext()).thenReturn(securityContext);//STATIC !!
         when(securityContext.getAuthentication()).thenReturn(authentication);
         when(authentication.getPrincipal()).thenReturn(principal);
         gameService.createNewGame("X");
         verify(gameDAO).saveNewGame(gameEntity);
-
-
     }
+
+    @Test
+    public void ffff() {
+        gameService.createNewGame("X");
+        verify(gameDAO).saveNewGame(any());
+
+    }*/
 }
