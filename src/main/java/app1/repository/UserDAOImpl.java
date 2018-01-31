@@ -21,7 +21,6 @@ public class UserDAOImpl implements UserDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-
     @Override
     public void insert(UserEntity userEntity) {
         getSession().save(userEntity);

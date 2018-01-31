@@ -19,10 +19,7 @@ public class AppController {
     }
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginView(Principal user) {
-        if (user == null) {
-            return "login";
-        }
-        return "redirect:/";
+        return user == null ? "login" : "redirect:/";
     }
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminView() {

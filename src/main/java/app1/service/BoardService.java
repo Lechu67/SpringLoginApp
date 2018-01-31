@@ -33,7 +33,6 @@ public class BoardService {
         gameDAO.updateGame(gameEntity);
     }
     public Move makeComputerMove(GameEntity gameEntity){
-
         int x = 0;
         int y = 0;
         char[][] board = prepareAndPopulateBoard(gameEntity);
@@ -48,10 +47,7 @@ public class BoardService {
         }
         return null;
     }
-
-    //maybe pass size as param ?
     public GameStatus checkGameStatus(GameEntity gameEntity){
-
         char[][] board = prepareAndPopulateBoard(gameEntity);
         if(tryGetWinner(board) != null){
             return GameStatus.WIN;
@@ -61,7 +57,6 @@ public class BoardService {
             return GameStatus.CONTINUE;
         }
     }
-
     private boolean checkIfDraw(char[][] board) {
         for (int row = 0 ; row < board.length ; row++){
             for (int col = 0 ; col < board[row].length ; col++){
@@ -73,7 +68,6 @@ public class BoardService {
         return true;
     }
     private Character tryGetWinner(char[][] board) {
-
         List<WinStrategy> winStrategies = new ArrayList<>();
         winStrategies.add(new VerticalWinStrategy());
         winStrategies.add(new HorizontalWinStrategy());
@@ -100,7 +94,6 @@ public class BoardService {
         });
         return board;
     }
-
     public void removeGame(GameEntity currentGameEntity) {
         gameDAO.removeGameAndMoves(currentGameEntity);
     }

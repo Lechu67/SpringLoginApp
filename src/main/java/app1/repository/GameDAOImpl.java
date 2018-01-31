@@ -25,7 +25,6 @@ public class GameDAOImpl implements GameDAO {
                 .list()
                 .isEmpty();
     }
-
     @Override
     public List<Move> findMovesByGame(GameEntity gameEntity) {
         List<Move> moves = sessionFactory.getCurrentSession()
@@ -33,10 +32,7 @@ public class GameDAOImpl implements GameDAO {
                 .setParameter(0,gameEntity)
                 .list();
         return moves;
-//        return moves.size() > 0 ? moves : null;
     }
-
-
     @Override
     public void saveNewMove(Move move) {
         sessionFactory.getCurrentSession().save(move);
@@ -60,7 +56,6 @@ public class GameDAOImpl implements GameDAO {
                 .list();
         return gameEntity.size() > 0 ? gameEntity.get(0) : null;
     }
-
     @Override
     public void removeGameAndMoves(GameEntity currentGameEntity) {
         sessionFactory.getCurrentSession().delete(currentGameEntity);

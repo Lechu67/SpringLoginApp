@@ -9,9 +9,11 @@ import app1.service.UserDetailService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -50,9 +52,8 @@ public class RegistrationControllerTest {
     @Mock
     private BindingResult bindingResultMock;
 
-    //@InjectMocks
+//    @InjectMocks
     private RegistrationController controller;
-
 
     @Before
     public void setup(){
@@ -68,12 +69,12 @@ public class RegistrationControllerTest {
                 .andExpect(view().name("signup"))
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
-    /*@Test
+    @Test
     public void shouldReturnLoginViewWithTheRightUserAttribute() throws Exception {
         mockMvc.perform(post("/signup").param("username","Waldek").param("password","pass"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/"));
-    }*/
+    }
     @Test
     public void shouldReturnSignUpViewWithErrorFieldRequired() throws Exception {
         mockMvc.perform(post("/signup").param("username","").param("password",""))
@@ -83,15 +84,6 @@ public class RegistrationControllerTest {
                 .andExpect(model().attributeHasFieldErrorCode("usercustom","password","password.empty"))
                 .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
     }
-    /*@Test
-    @WithMockUser(value = "Heniek")
-    public void shouldReturnSignUpViewWithErrorUserExist() throws Exception {
-        mockMvc.perform(post("/signup").param("username","Heniek").param("password","Heniek"))
-                .andExpect(status().is2xxSuccessful())
-                .andExpect(view().name("signup"))
-                .andExpect(model().attributeHasFieldErrorCode("usercustom","username","username.exist"))
-                .andExpect(forwardedUrl("WEB-INF/view/signup.jsp"));
-    }*/
     @Test
     public void shouldReturnSignUpViewWhenHasError() throws Exception {
         when(bindingResultMock.hasErrors()).thenReturn(true);

@@ -21,17 +21,15 @@ public class GameService {
     public void createNewGame(String userSymbol){
 
         UserEntity userEntity = getUserEntity();
-        GameEntity gameEntity = new GameEntity(userSymbol.charAt(0), isUserFirstPlayer(), userEntity,3);// dimension 3 by principe
+        GameEntity gameEntity = new GameEntity(userSymbol.charAt(0), isUserFirstPlayer(), userEntity,3);
         gameDAO.saveNewGame(gameEntity);
     }
-
     public GameEntity loadGameByCurrentUser(){
         return gameDAO.findGameByUserName(getUserEntity());
     }
     private boolean isUserFirstPlayer(){
         return new Random().nextBoolean();
     }
-
     private UserEntity getUserEntity() {
         UserDetails currentUser =
                 (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();

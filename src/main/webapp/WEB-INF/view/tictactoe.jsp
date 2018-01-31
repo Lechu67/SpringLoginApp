@@ -48,7 +48,6 @@ table {
             success: function (currentBoard) {
                 $.each(currentBoard, function (i, boardResponse) {
                     $('td[x='+boardResponse.x+'][y='+boardResponse.y+']').append(boardResponse.symbol);
-                    //who is playing ?
                 })
             }
         });

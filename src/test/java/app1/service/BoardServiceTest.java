@@ -47,7 +47,6 @@ public class BoardServiceTest {
         boardService.isBoardCellAvailable(move);
         verify(gameDAO).isMovePossible(move);
     }
-
     @Test
     public void shouldChangePlayerAndUpdateGame() {
 
@@ -56,7 +55,6 @@ public class BoardServiceTest {
         assertThat(gameEntity.isUserNextMove(), is(false));
         verify(gameDAO).updateGame(gameEntity);
     }
-
     @Test
     public void shouldPrepareBoardWithSymbols() {
         char[][] board = getTestBoard();
@@ -64,7 +62,6 @@ public class BoardServiceTest {
         assertThat(board[1][2], is('X'));
         assertThat(board[1][0], is('\u0000'));
     }
-
     @Test
     public void shouldMakeComputerMoveOnCoord1_0() {
         char[][] board = getTestBoard();
@@ -73,7 +70,6 @@ public class BoardServiceTest {
         assertThat(computerMove.getRow(), is(0));
         assertThat(computerMove.getSymbol(), is('O'));
     }
-
     @Test
     public void shouldReturnComputerMoveAsNullBecauseOfFullBoard() {
         char[][] board = getDrawTestBoard();

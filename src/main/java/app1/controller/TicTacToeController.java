@@ -20,19 +20,10 @@ public class TicTacToeController {
     @Autowired
     private GameService gameService;
 
-
-    /*@RequestMapping(value = "/newGame", method = RequestMethod.POST,headers = {??}, cosumes= ??)
-    public String createGame(@RequestParam("user_symbol") String userSymbol) {
-        gameService.createNewGame(userSymbol);
-        return "tictactoe";
-    }*/
-
-
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
         if (gameService.loadGameByCurrentUser() == null){
             gameService.createNewGame("X");
-//            return "newGame";
         }
         return "tictactoe";
     }
@@ -43,20 +34,17 @@ public class TicTacToeController {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
-
         List<BoardResponse> currentBoard = new ArrayList<>();
-
         char[][] board = boardService.prepareAndPopulateBoard(currentGameEntity);
         for (int col = 0; col < board[0].length ; col++){
             for (int row = 0; row < board.length ; row++){
                 if(board[col][row] != '\u0000') {
-                    currentBoard.add(new BoardResponse(col, row, board[col][row])); // maybe pass info who is playing
+                    currentBoard.add(new BoardResponse(col, row, board[col][row]));
                 }
             }
         }
         return currentBoard;
     }
-
     @RequestMapping(value = "/playerMove", method = RequestMethod.POST)
     @ResponseBody
     public MovePlayerResponse playerMove(@RequestBody MoveRequest moveRequest) {
@@ -69,7 +57,6 @@ public class TicTacToeController {
                 return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());
             }
         GameStatus gameStatus = getGameStatusAndUpdateGame(currentGameEntity, move);
-
         return new MovePlayerResponse(gameStatus,move.getSymbol());
     }
     @RequestMapping(value = "/computerMove", method = RequestMethod.POST)
@@ -80,7 +67,6 @@ public class TicTacToeController {
                 gameService.loadGameByCurrentUser();
         Move computerMove = boardService.makeComputerMove(currentGameEntity);
         GameStatus gameStatus = getGameStatusAndUpdateGame(currentGameEntity, computerMove);
-
         return new MoveComputerResponse(gameStatus,computerMove.getSymbol(),computerMove.getColumn(),computerMove.getRow());
         }
 

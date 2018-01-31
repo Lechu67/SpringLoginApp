@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class GameServiceTest {
 
-/*    @InjectMocks
+    @InjectMocks
     private GameService gameService;
 
     @Mock
@@ -49,14 +49,14 @@ public class GameServiceTest {
     @Test
     public void shouldCallSaveDAOMethod() {
 
-        GameEntity gameEntity = new GameEntity();
-        when(securityContextHolder.getContext()).thenReturn(securityContext);//STATIC !!
-        when(securityContext.getAuthentication()).thenReturn(authentication);
-        when(authentication.getPrincipal()).thenReturn(principal);
-        gameService.createNewGame("X");
-        verify(gameDAO).saveNewGame(gameEntity);
+//        GameEntity gameEntity = new GameEntity();
+//        when(securityContextHolder.getContext()).thenReturn(securityContext);//STATIC !!
+//        when(securityContext.getAuthentication()).thenReturn(authentication);
+//        when(authentication.getPrincipal()).thenReturn(principal);
+//        gameService.createNewGame("X");
+//        verify(gameDAO).saveNewGame(gameEntity);
     }
-
+/*
     @Test
     public void ffff() {
         gameService.createNewGame("X");

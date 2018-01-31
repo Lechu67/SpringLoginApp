@@ -40,7 +40,6 @@ public class UserDAOImplTest {
 
     //http://www.baeldung.com/spring-jpa-test-in-memory-database
 
-//    @Resource
     @Autowired
     private UserDAO dao;
 

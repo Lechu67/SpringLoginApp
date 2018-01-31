@@ -36,7 +36,6 @@ public class TicTacToeControllerTest {
     private GameEntity gameEntity;
     private  Move move;
 
-
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
@@ -45,7 +44,6 @@ public class TicTacToeControllerTest {
         move = new Move();
         move.setSymbol('X');
     }
-
     @Test
     public void shouldCreateNewGameWhenNoGameExistingAndReturnTicTacToeView() throws Exception {
         when(gameService.loadGameByCurrentUser()).thenReturn(null);

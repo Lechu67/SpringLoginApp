@@ -31,17 +31,13 @@ public class AppControllerTest {
     @Autowired
     private WebApplicationContext wac;
 
-
     @Before
     public void setup(){
         this.mockMvc =
                 MockMvcBuilders.webAppContextSetup(this.wac).apply(springSecurity()).build();
     }
-
-
     @Test
     @WithMockUser(username = "Leszek")
-//    @WithUserDetails(value = "Leszek")
     public void shouldReturnLoginViewWithTheRightUserAttribute() throws Exception {
         mockMvc.perform(get("/")).andExpect(status().isOk())
                 .andExpect(request().attribute("user","Leszek"))
