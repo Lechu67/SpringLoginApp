@@ -14,6 +14,9 @@ import java.util.List;
 @Controller
 public class TicTacToeController {
 
+    public static final String USER_SYMBOL = "X";
+    public static final char EMPTY_FIELD = '\u0000';
+
     @Autowired
     private BoardService boardService;
 
@@ -23,22 +26,20 @@ public class TicTacToeController {
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
         if (gameService.loadGameByCurrentUser() == null){
-            gameService.createNewGame("X");
+            gameService.createNewGame(USER_SYMBOL);
         }
         return "tictactoe";
     }
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     @ResponseBody
-    public List<BoardResponse> sendPopulatedBoard() {
-
-        GameEntity currentGameEntity =
-                gameService.loadGameByCurrentUser();
+    public List<BoardResponse> sendPopulatedBoard(UserEntity user) {
+        GameEntity currentGameEntity = gameService.loadGameByCurrentUser();
         List<BoardResponse> currentBoard = new ArrayList<>();
         char[][] board = boardService.prepareAndPopulateBoard(currentGameEntity);
         for (int col = 0; col < board[0].length ; col++){
             for (int row = 0; row < board.length ; row++){
-                if(board[col][row] != '\u0000') {
+                if(board[col][row] != EMPTY_FIELD) {
                     currentBoard.add(new BoardResponse(col, row, board[col][row]));
                 }
             }
@@ -51,7 +52,6 @@ public class TicTacToeController {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser();
-//        boolean isUserMove = currentGameEntity.isUserNextMove();
             Move move = boardService.createMove(moveRequest,currentGameEntity);
             if(!boardService.isBoardCellAvailable(move)){
                 return new MovePlayerResponse(GameStatus.TAKEN, move.getSymbol());

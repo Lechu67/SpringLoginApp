@@ -48,7 +48,12 @@ table {
             success: function (currentBoard) {
                 $.each(currentBoard, function (i, boardResponse) {
                     $('td[x='+boardResponse.x+'][y='+boardResponse.y+']').append(boardResponse.symbol);
-                })
+                });
+                var lastSymbol = currentBoard.get(currentBoard.length-1).symbol;
+                    if(lastSymbol == 'X'){
+                        computerMove();
+                    }
+
             }
         });
         $("td").click(function(element){

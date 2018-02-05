@@ -38,8 +38,7 @@ public class UserDetailService implements UserDetailsService {
             roles.add(new UserRole(role.getRole(),user));
         }
         user.setRoles(roles);
-        UserDetails userDetails = new User(user.getUsername(),user.getPassword(),user.getAuthorities());
-        return userDetails;
+        return new User(user.getUsername(),user.getPassword(),user.getAuthorities());
     }
     public void addUser(UserEntity user){
 

@@ -28,8 +28,11 @@ public class GameService {
         return gameDAO.findGameByUserName(getUserEntity());
     }
     private boolean isUserFirstPlayer(){
-        return new Random().nextBoolean();
+//        return new Random().nextBoolean();
+        return false;
     }
+
+    //zrobic na poziomie controllera, niech serwis nie polega na Security
     private UserEntity getUserEntity() {
         UserDetails currentUser =
                 (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
