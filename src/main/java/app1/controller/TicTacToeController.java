@@ -29,7 +29,7 @@ public class TicTacToeController {
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
         if (gameService.loadGameByCurrentUser(getCurrentUser()) == null){
-            gameService.createNewGame(USER_SYMBOL,getCurrentUser());
+            gameService.createNewGame(USER_SYMBOL,getCurrentUser());// ADD DIFFICULTY TO ENTITY, ALTER TABLE, CHANGE IN STRATEGY
         }
         return "tictactoe";
     }
