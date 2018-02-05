@@ -19,8 +19,6 @@ public class BoardService {
     @Autowired
     private GameDAO gameDAO;
 
-    private Board board;
-
     public boolean isBoardCellAvailable(Move move){
         return gameDAO.isMovePossible(move);
     }
@@ -36,7 +34,7 @@ public class BoardService {
     public Move makeComputerMove(/*ComputerMoveStrategy strategy, */GameEntity gameEntity){
         int x = 0;
         int y = 0;
-        char[][] board = prepareAndPopulateBoard(gameEntity);
+        char[][] board = getActualBoard(gameEntity).getBoard();
 
         // Move move = strategy.move(board);
         // validate move;
@@ -51,28 +49,13 @@ public class BoardService {
         }
         return null;
     }
+    public Board getActualBoard(GameEntity gameEntity){
+        return new Board(gameEntity,gameDAO.findMovesByGame(gameEntity));
+    }
 
     public GameStatus checkGameStatus(GameEntity gameEntity){
-        board = new Board(gameEntity,gameDAO.findMovesByGame(gameEntity));
-        if(board.tryGetWinner() != null){
-            return GameStatus.WIN;
-        } else if(board.checkIfDraw()){
-            return GameStatus.DRAW;
-        }else{
-            return GameStatus.CONTINUE;
-        }
+        return getActualBoard(gameEntity).checkGameStatus();
     }
-    public char[][] prepareAndPopulateBoard(GameEntity gameEntity){
-        char[][] board = new char[gameEntity.getDimension()][gameEntity.getDimension()];
-        List<Move> moves = gameDAO.findMovesByGame(gameEntity);
-        moves.forEach(m -> {
-            int x = m.getColumn();
-            int y = m.getRow();
-            board[x][y] = m.getSymbol();
-        });
-        return board;
-    }
-
     public void removeGame(GameEntity currentGameEntity) {
         gameDAO.removeGameAndMoves(currentGameEntity);
     }

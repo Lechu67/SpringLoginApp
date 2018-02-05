@@ -1,6 +1,9 @@
 package app1.winStrategy;
 
 public class VerticalWinStrategy implements WinStrategy{
+
+    public static final char EMPTY_FIELD = '\u0000';
+
     @Override
     public Character isWin(char[][] board) {
 
@@ -11,7 +14,7 @@ public class VerticalWinStrategy implements WinStrategy{
                 if(nextSymbol != symbol){
                     break;
                 }
-                if(col == board[row].length -1 && symbol!='\u0000'){
+                if(col == board[row].length -1 && symbol!= EMPTY_FIELD){
                     return symbol;
                 }
             }

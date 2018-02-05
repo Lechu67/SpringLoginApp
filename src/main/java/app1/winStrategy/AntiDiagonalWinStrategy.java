@@ -1,6 +1,9 @@
 package app1.winStrategy;
 
 public class AntiDiagonalWinStrategy implements WinStrategy {
+
+    public static final char EMPTY_FIELD = '\u0000';
+
     @Override
     public Character isWin(char[][] board) {
 
@@ -11,7 +14,7 @@ public class AntiDiagonalWinStrategy implements WinStrategy {
                  if(nextSymbol != symbol){
                      break;
                  }
-                 if(col == 0 && symbol!='\u0000'){
+                 if(col == 0 && symbol!= EMPTY_FIELD){
                      return symbol;
                  }
             }

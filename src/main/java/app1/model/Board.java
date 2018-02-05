@@ -69,5 +69,14 @@ public class Board {
         }
         return null;
     }
+    public GameStatus checkGameStatus(){
+        if(tryGetWinner() != null){
+            return GameStatus.WIN;
+        } else if(checkIfDraw()){
+            return GameStatus.DRAW;
+        }else{
+            return GameStatus.CONTINUE;
+        }
+    }
 
 }

@@ -9,8 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Random;
-
 @Service
 @Transactional
 public class GameService {
@@ -18,27 +16,15 @@ public class GameService {
     @Autowired
     private GameDAO gameDAO;
 
-    public void createNewGame(String userSymbol){
-
-        UserEntity userEntity = getUserEntity();
+    public void createNewGame(String userSymbol, UserEntity userEntity){
         GameEntity gameEntity = new GameEntity(userSymbol.charAt(0), isUserFirstPlayer(), userEntity,3);
         gameDAO.saveNewGame(gameEntity);
     }
-    public GameEntity loadGameByCurrentUser(){
-        return gameDAO.findGameByUserName(getUserEntity());
+    public GameEntity loadGameByCurrentUser(UserEntity userEntity){
+        return gameDAO.findGameByUserName(userEntity);
     }
     private boolean isUserFirstPlayer(){
 //        return new Random().nextBoolean();
         return false;
-    }
-
-    //zrobic na poziomie controllera, niech serwis nie polega na Security
-    private UserEntity getUserEntity() {
-        UserDetails currentUser =
-                (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return new UserEntity(
-                currentUser.getUsername(),
-                currentUser.getPassword()
-        );
     }
 }
