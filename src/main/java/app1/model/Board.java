@@ -34,7 +34,7 @@ public class Board {
     }
 
 
-    private char[][] prepareAndPopulateBoard(List<Move> moves){
+    public char[][] prepareAndPopulateBoard(List<Move> moves){
         board = new char[gameEntity.getDimension()][gameEntity.getDimension()];
         moves.forEach(m -> {
             int x = m.getColumn();

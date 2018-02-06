@@ -16,9 +16,9 @@ public class GameService {
     @Autowired
     private GameDAO gameDAO;
 
-    public void createNewGame(String userSymbol, UserEntity userEntity, Enum difficulty){
+    public void createNewGame(char userSymbol, UserEntity userEntity, Enum difficulty){
         GameEntity gameEntity = new GameEntity(
-                userSymbol.charAt(0),
+                userSymbol,
                 isUserFirstPlayer(),
                 userEntity,
                 3,

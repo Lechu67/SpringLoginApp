@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 public class TicTacToeController {
 
-    private static final String USER_SYMBOL = "X";
+    private static final char USER_SYMBOL = 'X';
     private static final char EMPTY_FIELD = '\u0000';
 
     @Autowired
@@ -37,8 +37,8 @@ public class TicTacToeController {
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     @ResponseBody
-    public List<BoardResponse> sendPopulatedBoard(@AuthenticationPrincipal UserDetails user) {
-        GameEntity currentGameEntity = gameService.loadGameByCurrentUser(getUserEntity(user));
+    public List<BoardResponse> sendPopulatedBoard() {
+        GameEntity currentGameEntity = gameService.loadGameByCurrentUser(getCurrentUser());
         return getBoardResponses(currentGameEntity);
     }
 
@@ -96,16 +96,9 @@ public class TicTacToeController {
     private boolean isEndGame(GameStatus gameStatus) {
         return gameStatus==GameStatus.WIN || gameStatus == GameStatus.DRAW;
     }
-//ktory lepiej ?
     private UserEntity getCurrentUser() {
         UserDetails currentUser =
                 (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return new UserEntity(
-                currentUser.getUsername(),
-                currentUser.getPassword()
-        );
-    }
-    private UserEntity getUserEntity(UserDetails currentUser) {
         return new UserEntity(
                 currentUser.getUsername(),
                 currentUser.getPassword()

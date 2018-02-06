@@ -1,8 +1,10 @@
 package app1.service;
 
+import app1.computerMoveStrategy.Difficulty;
 import app1.model.GameEntity;
 import app1.model.Move;
 import app1.model.MoveRequest;
+import app1.model.UserEntity;
 import app1.repository.GameDAO;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,40 +29,19 @@ public class GameServiceTest {
 
     @InjectMocks
     private GameService gameService;
-
     @Mock
     private GameDAO gameDAO;
 
-    @Mock
-    private SecurityContextHolder securityContextHolder;
-    @Mock
-    private SecurityContext securityContext;
-    @Mock
-    private Authentication authentication;
-    @Mock
-    private Principal principal;
-
+    public GameEntity gameEntity;
 
     @Before
     public void setup() {
-        MockitoAnnotations.initMocks(this);
+        gameEntity = new GameEntity();
     }
 
     @Test
     public void shouldCallSaveDAOMethod() {
-
-//        GameEntity gameEntity = new GameEntity();
-//        when(securityContextHolder.getContext()).thenReturn(securityContext);//STATIC !!
-//        when(securityContext.getAuthentication()).thenReturn(authentication);
-//        when(authentication.getPrincipal()).thenReturn(principal);
-//        gameService.createNewGame("X");
-//        verify(gameDAO).saveNewGame(gameEntity);
+        gameService.createNewGame(gameEntity.getUserSymbol(),gameEntity.getUser(),Difficulty.EASY);
+        verify(gameDAO).saveNewGame(any(GameEntity.class));
     }
-/*
-    @Test
-    public void ffff() {
-        gameService.createNewGame("X");
-        verify(gameDAO).saveNewGame(any());
-
-    }*/
 }
