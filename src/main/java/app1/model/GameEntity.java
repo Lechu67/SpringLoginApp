@@ -25,14 +25,18 @@ public class GameEntity {
     @Column(name = "dimension")
     private int dimension;
 
+    @Column(name = "difficulty")
+    private String difficulty;
+
     public GameEntity() {
     }
 
-    public GameEntity(char userSymbol, boolean isUserNextMove, UserEntity user, int dimension) {
+    public GameEntity(char userSymbol, boolean isUserNextMove, UserEntity user, int dimension, String difficulty) {
         this.userSymbol = userSymbol;
         this.isUserNextMove = isUserNextMove;
         this.user = user;
         this.dimension=dimension;
+        this.difficulty=difficulty;
     }
 
     public boolean isUserNextMove() {
@@ -73,5 +77,13 @@ public class GameEntity {
 
     public void setUser(UserEntity user) {
         this.user = user;
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 }

@@ -1,3 +1,3 @@
-DROP TABLE game;
-DROP TABLE move;
-DROP TABLE users;
+DELETE from game;
+delete from move;
+delete from users;

@@ -1,5 +1,6 @@
 package app1.controller;
 
+import app1.computerMoveStrategy.Difficulty;
 import app1.model.*;
 import app1.service.BoardService;
 import app1.service.GameService;
@@ -17,8 +18,8 @@ import java.util.List;
 @Controller
 public class TicTacToeController {
 
-    public static final String USER_SYMBOL = "X";
-    public static final char EMPTY_FIELD = '\u0000';
+    private static final String USER_SYMBOL = "X";
+    private static final char EMPTY_FIELD = '\u0000';
 
     @Autowired
     private BoardService boardService;
@@ -29,7 +30,7 @@ public class TicTacToeController {
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
         if (gameService.loadGameByCurrentUser(getCurrentUser()) == null){
-            gameService.createNewGame(USER_SYMBOL,getCurrentUser());// ADD DIFFICULTY TO ENTITY, ALTER TABLE, CHANGE IN STRATEGY
+            gameService.createNewGame(USER_SYMBOL,getCurrentUser(),Difficulty.EASY);
         }
         return "tictactoe";
     }

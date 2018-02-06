@@ -36,7 +36,7 @@ public class BoardService {
     public Move makeComputerMove(GameEntity gameEntity){
         Map<Difficulty,ComputerMoveStrategy> map = new HashMap<>();
         map.put(Difficulty.EASY,new EasyStrategy());
-        return map.get(Difficulty.EASY).getComputerMove(getActualBoard(gameEntity));
+        return map.get(Difficulty.valueOf(gameEntity.getDifficulty())).getComputerMove(getActualBoard(gameEntity));
     }
     public Board getActualBoard(GameEntity gameEntity){
         return new Board(gameEntity,gameDAO.findMovesByGame(gameEntity));

@@ -9,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -36,14 +35,14 @@ public class GameDAOImplTest extends AbstractTransactionalJUnit4SpringContextTes
     @Before
     public void setup(){
         executeSqlScript("insert-data.sql",false);
-        gameEntity = new GameEntity('X',true,user,3);
+        gameEntity = new GameEntity('X',true,user,3,"EASY");
         gameEntity.setId(1);
         user = new UserEntity("a", "a");
     }
     @After
     public void end(){
-//        executeSqlScript("delete.sql",false);
-        dropTables("game","move","users");
+        executeSqlScript("delete.sql",false);
+//        dropTables("game","move","users");
     }
     @Test
     public void shouldFindGameEntityForGivenUser(){
