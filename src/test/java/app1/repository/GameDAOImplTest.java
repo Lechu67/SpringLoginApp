@@ -5,6 +5,7 @@ import app1.model.GameEntity;
 import app1.model.Move;
 import app1.model.UserEntity;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -70,15 +71,6 @@ public class GameDAOImplTest extends AbstractTransactionalJUnit4SpringContextTes
         assertThat(gameDAO.findMovesByGame(gameEntity).size(),is(1));
         assertThat(gameDAO.findMovesByGame(gameEntity).get(0), instanceOf(Move.class));
     }
-//    do sprawdzewnia
-    /*@Test
-    public void shouldSaveNewMove(){
-        Move move = new Move(2,0,gameEntity,'X');
-        assertThat(countRowsInTable("move"),is(1));
-        gameDAO.saveNewMove(move);
-        int a= countRowsInTable("move");
-        assertThat(countRowsInTable("move"),is(2));
-    }*/
     @Test
     public void shouldRemoveGameAndMoves(){
         gameDAO.removeGameAndMoves(gameEntity);
