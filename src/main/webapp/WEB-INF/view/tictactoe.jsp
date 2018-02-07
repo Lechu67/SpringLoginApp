@@ -51,6 +51,7 @@ table {
                 });
             }
         });
+        alert("It's your move");
         $("td").click(function(element){
             console.log($(element.target).attr("x"));
             console.log($(element.target).attr("y"));

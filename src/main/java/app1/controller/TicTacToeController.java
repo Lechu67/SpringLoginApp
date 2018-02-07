@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Controller
@@ -29,12 +30,11 @@ public class TicTacToeController {
 
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
     public String tictactoeView() {
-        if (gameService.loadGameByCurrentUser(getCurrentUser()) == null){
-            gameService.createNewGame(USER_SYMBOL,getCurrentUser(),Difficulty.EASY);
+        if (gameService.loadGameByCurrentUser(getCurrentUser()) == null) {
+            gameService.createNewGame(USER_SYMBOL, getCurrentUser(), Difficulty.EASY);
         }
         return "tictactoe";
     }
-    //wybrac kto gra, zapisac ostatni symbol, jak jest ruch gracza komunikat.
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     @ResponseBody
@@ -68,16 +68,16 @@ public class TicTacToeController {
         }
 
     private List<BoardResponse> getBoardResponses(GameEntity currentGameEntity) {
-        List<BoardResponse> currentBoard = new ArrayList<>();
-        char[][] board = boardService.getActualBoard(currentGameEntity).getBoard();
-        for (int col = 0; col < board[0].length ; col++){
-            for (int row = 0; row < board.length ; row++){
-                if(board[col][row] != EMPTY_FIELD) {
-                    currentBoard.add(new BoardResponse(col, row, board[col][row]));
-                }
-            }
-        }
-        return currentBoard;
+        List<BoardResponse> boardSymbolsLocations;
+        Board board = boardService.getActualBoard(currentGameEntity);
+        boardSymbolsLocations = board.getMoves()
+                .stream()
+                .map(move ->
+                        new BoardResponse(move.getColumn(),
+                                move.getRow(),
+                                move.getSymbol()))
+                .collect(Collectors.toList());
+        return boardSymbolsLocations;
     }
     private GameStatus saveMoveAndGetGameStatus(GameEntity currentGameEntity, Move move) {
         boardService.saveNewMove(move);

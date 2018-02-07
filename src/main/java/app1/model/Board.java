@@ -23,6 +23,15 @@ public class Board {
 
     //get taken fields
 
+
+    public List<Move> getMoves() {
+        return moves;
+    }
+
+    public void setMoves(List<Move> moves) {
+        this.moves = moves;
+    }
+
     public void setBoard(char[][] board) {
         this.board = board;
     }

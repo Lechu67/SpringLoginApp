@@ -15,8 +15,9 @@ public class GameEntity {
     @Column(name = "symbol")
     private char userSymbol;
 
-    @Column(name = "is_user_next_move")
-    private boolean isUserNextMove;
+    //alter table game change is_user_next_move playing_symbol varchar(2);
+    @Column(name = "playing_symbol")
+    private char currentPlayingSymbol;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "username")
