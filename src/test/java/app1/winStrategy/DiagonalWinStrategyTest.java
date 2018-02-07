@@ -26,6 +26,6 @@ public class DiagonalWinStrategyTest {
         char[][] boardToTest= new char[2][2];
         boardToTest[0][1] = 'C';
         boardToTest[0][0] = 'C';
-        assertEquals(null, diagonalWinStrategy.isWin(boardToTest));
+        assertNull(diagonalWinStrategy.isWin(boardToTest));
     }
 }

@@ -34,6 +34,7 @@ public class TicTacToeController {
         }
         return "tictactoe";
     }
+    //wybrac kto gra, zapisac ostatni symbol, jak jest ruch gracza komunikat.
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     @ResponseBody
@@ -61,7 +62,7 @@ public class TicTacToeController {
 
         GameEntity currentGameEntity =
                 gameService.loadGameByCurrentUser(getCurrentUser());
-        Move computerMove = boardService.makeComputerMove(currentGameEntity);
+        Move computerMove = boardService.makeComputerMove(currentGameEntity);//
         GameStatus gameStatus = saveMoveAndGetGameStatus(currentGameEntity, computerMove);
         return new MoveComputerResponse(gameStatus,computerMove.getSymbol(),computerMove.getColumn(),computerMove.getRow());
         }

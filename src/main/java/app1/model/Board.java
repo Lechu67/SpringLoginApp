@@ -8,8 +8,8 @@ import java.util.List;
 public class Board {
 
     public GameEntity gameEntity;
-    public List<Move> moves;
-    char[][] board;
+    private List<Move> moves;
+    private char[][] board;
 
     public Board(GameEntity gameEntity, List<Move> moves) {
         this.gameEntity = gameEntity;
@@ -20,6 +20,8 @@ public class Board {
     public char[][] getBoard() {
         return board;
     }
+
+    //get taken fields
 
     public void setBoard(char[][] board) {
         this.board = board;
@@ -43,7 +45,16 @@ public class Board {
         });
         return board;
     }
-    public boolean checkIfDraw() {
+    public GameStatus checkGameStatus(){
+        if(tryGetWinner() != null){
+            return GameStatus.WIN;
+        } else if(checkIfDraw()){
+            return GameStatus.DRAW;
+        }else{
+            return GameStatus.CONTINUE;
+        }
+    }
+    private boolean checkIfDraw() {
         for (int row = 0 ; row < board.length ; row++){
             for (int col = 0 ; col < board[row].length ; col++){
                 if(board[row][col] == 0){
@@ -53,7 +64,7 @@ public class Board {
         }
         return true;
     }
-    public Character tryGetWinner() {
+    private Character tryGetWinner() {
         List<WinStrategy> winStrategies = new ArrayList<>();
         winStrategies.add(new VerticalWinStrategy());
         winStrategies.add(new HorizontalWinStrategy());
@@ -69,14 +80,4 @@ public class Board {
         }
         return null;
     }
-    public GameStatus checkGameStatus(){
-        if(tryGetWinner() != null){
-            return GameStatus.WIN;
-        } else if(checkIfDraw()){
-            return GameStatus.DRAW;
-        }else{
-            return GameStatus.CONTINUE;
-        }
-    }
-
 }

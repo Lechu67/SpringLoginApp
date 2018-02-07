@@ -6,6 +6,4 @@ import app1.model.Move;
 public interface ComputerMoveStrategy {
 
     Move getComputerMove(Board board);
-
-
 }

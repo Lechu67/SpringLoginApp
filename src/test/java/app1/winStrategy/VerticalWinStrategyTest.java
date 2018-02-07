@@ -26,6 +26,6 @@ public class VerticalWinStrategyTest {
         char[][] boardToTest= new char[2][2];
         boardToTest[1][1] = 'C';
         boardToTest[0][0] = 'C';
-        assertEquals(null, verticalWinStrategy.isWin(boardToTest));
+        assertNull(verticalWinStrategy.isWin(boardToTest));
     }
 }

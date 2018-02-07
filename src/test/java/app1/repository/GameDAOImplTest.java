@@ -43,7 +43,6 @@ public class GameDAOImplTest extends AbstractTransactionalJUnit4SpringContextTes
     @After
     public void end(){
         executeSqlScript("delete.sql",false);
-//        dropTables("game","move","users");
     }
     @Test
     public void shouldFindGameEntityForGivenUser(){

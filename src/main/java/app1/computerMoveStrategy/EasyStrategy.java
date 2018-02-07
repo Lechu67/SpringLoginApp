@@ -2,7 +2,9 @@ package app1.computerMoveStrategy;
 
 import app1.model.Board;
 import app1.model.Move;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EasyStrategy implements ComputerMoveStrategy {
 
     public static final char EMPTY_FIELD = '\u0000';

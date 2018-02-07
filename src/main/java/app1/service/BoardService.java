@@ -21,6 +21,9 @@ public class BoardService {
     @Autowired
     private GameDAO gameDAO;
 
+    @Autowired
+    private Map<Difficulty,ComputerMoveStrategy> computerMoveStrategyMap;
+
     public boolean isBoardCellAvailable(Move move){
         return gameDAO.isMovePossible(move);
     }
@@ -34,9 +37,9 @@ public class BoardService {
         gameDAO.updateGame(gameEntity);
     }
     public Move makeComputerMove(GameEntity gameEntity){
-        Map<Difficulty,ComputerMoveStrategy> map = new HashMap<>();
-        map.put(Difficulty.EASY,new EasyStrategy());
-        return map.get(Difficulty.valueOf(gameEntity.getDifficulty())).getComputerMove(getActualBoard(gameEntity));
+        Difficulty difficulty = Difficulty.valueOf(gameEntity.getDifficulty());
+        ComputerMoveStrategy computerMoveStrategy = computerMoveStrategyMap.get(difficulty);
+        return computerMoveStrategy.getComputerMove(getActualBoard(gameEntity));
     }
     public Board getActualBoard(GameEntity gameEntity){
         return new Board(gameEntity,gameDAO.findMovesByGame(gameEntity));
@@ -45,6 +48,7 @@ public class BoardService {
     public GameStatus checkGameStatus(GameEntity gameEntity){
         return getActualBoard(gameEntity).checkGameStatus();
     }
+
     public void removeGame(GameEntity currentGameEntity) {
         gameDAO.removeGameAndMoves(currentGameEntity);
     }
