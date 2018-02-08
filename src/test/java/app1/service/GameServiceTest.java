@@ -41,7 +41,7 @@ public class GameServiceTest {
 
     @Test
     public void shouldCallSaveDAOMethod() {
-        gameService.createNewGame(gameEntity.getUserSymbol(),gameEntity.getUser(),Difficulty.EASY);
+        gameService.createNewGame(gameEntity.getUserSymbol(),gameEntity.getComputerSymbol(),gameEntity.getUser(),Difficulty.EASY);
         verify(gameDAO).saveNewGame(any(GameEntity.class));
     }
 }

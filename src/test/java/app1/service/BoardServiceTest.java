@@ -37,11 +37,11 @@ public class BoardServiceTest {
         boardService.isBoardCellAvailable(move);
         verify(gameDAO).isMovePossible(move);
     }
-    @Test
-    public void shouldChangePlayerAndUpdateGame() {
-        gameEntity.setUserNextMove(true);
-        boardService.changePlayer(gameEntity);
-        assertThat(gameEntity.isUserNextMove(), is(false));
-        verify(gameDAO).updateGame(gameEntity);
-    }
+//    @Test
+//    public void shouldChangePlayerAndUpdateGame() {
+//        gameEntity.setUserNextMove(true);
+//        boardService.changePlayer(gameEntity);
+//        assertThat(gameEntity.isUserNextMove(), is(false));
+//        verify(gameDAO).updateGame(gameEntity);
+//    }
 }

@@ -5,5 +5,6 @@ public enum GameStatus {
     TAKEN,
     CONTINUE,
     WIN,
-    DRAW;
+    DRAW,
+    NOT_YOUR_TURN;
 }

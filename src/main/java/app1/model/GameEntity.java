@@ -12,10 +12,13 @@ public class GameEntity {
     @Column(name = "game_id")
     private Integer id;
 
-    @Column(name = "symbol")
+    @Column(name = "user_symbol")
     private char userSymbol;
 
-    //alter table game change is_user_next_move playing_symbol varchar(2);
+    @Column(name = "computer_symbol")
+    private char computerSymbol;
+    //change name and type in DB
+    //alter table game change old_name new_name varchar(2);
     @Column(name = "playing_symbol")
     private char currentPlayingSymbol;
 
@@ -32,20 +35,21 @@ public class GameEntity {
     public GameEntity() {
     }
 
-    public GameEntity(char userSymbol, boolean isUserNextMove, UserEntity user, int dimension, String difficulty) {
+    public GameEntity(char userSymbol,char computerSymbol, char currentPlayingSymbol, UserEntity user, int dimension, String difficulty) {
         this.userSymbol = userSymbol;
-        this.isUserNextMove = isUserNextMove;
+        this.computerSymbol = computerSymbol;
+        this.currentPlayingSymbol = currentPlayingSymbol;
         this.user = user;
         this.dimension=dimension;
         this.difficulty=difficulty;
     }
 
-    public boolean isUserNextMove() {
-        return isUserNextMove;
+    public char getCurrentPlayingSymbol() {
+        return currentPlayingSymbol;
     }
 
-    public void setUserNextMove(boolean userNextMove) {
-        isUserNextMove = userNextMove;
+    public void setCurrentPlayingSymbol(char currentPlayingSymbol) {
+        this.currentPlayingSymbol = currentPlayingSymbol;
     }
 
     public Integer getId() {
@@ -86,5 +90,13 @@ public class GameEntity {
 
     public void setDifficulty(String difficulty) {
         this.difficulty = difficulty;
+    }
+
+    public char getComputerSymbol() {
+        return computerSymbol;
+    }
+
+    public void setComputerSymbol(char computerSymbol) {
+        this.computerSymbol = computerSymbol;
     }
 }

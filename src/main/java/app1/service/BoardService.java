@@ -24,6 +24,8 @@ public class BoardService {
     @Autowired
     private Map<Difficulty,ComputerMoveStrategy> computerMoveStrategyMap;
 
+
+
     public boolean isBoardCellAvailable(Move move){
         return gameDAO.isMovePossible(move);
     }
@@ -31,9 +33,15 @@ public class BoardService {
     public void saveNewMove(Move move){
         gameDAO.saveNewMove(move);
     }
-
+    //TODO
     public void changePlayer(GameEntity gameEntity){
-        gameEntity.setUserNextMove(!gameEntity.isUserNextMove());
+        char playerSymbol = gameEntity.getUserSymbol();
+        char computerSymbol = gameEntity.getComputerSymbol();
+        if (gameEntity.getCurrentPlayingSymbol() == playerSymbol) {
+            gameEntity.setCurrentPlayingSymbol(computerSymbol);
+        } else {
+            gameEntity.setCurrentPlayingSymbol(playerSymbol);
+        }
         gameDAO.updateGame(gameEntity);
     }
     public Move makeComputerMove(GameEntity gameEntity){

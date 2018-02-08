@@ -16,19 +16,22 @@ public class GameService {
     @Autowired
     private GameDAO gameDAO;
 
-    public void createNewGame(char userSymbol, UserEntity userEntity, Enum difficulty){
+    public void createNewGame(char userSymbol,char computerSymbol, UserEntity userEntity, Enum difficulty){
         GameEntity gameEntity = new GameEntity(
                 userSymbol,
-                isUserFirstPlayer(),
+                computerSymbol,
+                getFirstPlayer(userSymbol,computerSymbol),
                 userEntity,
                 3,
                 difficulty.toString());
         gameDAO.saveNewGame(gameEntity);
     }
+
+    private char getFirstPlayer(char... symbols) {
+        return symbols[(int) (Math.random() * symbols.length)];
+    }
+
     public GameEntity loadGameByCurrentUser(UserEntity userEntity){
         return gameDAO.findGameByUserName(userEntity);
-    }
-    private boolean isUserFirstPlayer(){
-        return new Random().nextBoolean();
     }
 }

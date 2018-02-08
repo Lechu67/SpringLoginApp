@@ -22,6 +22,7 @@ public class EasyStrategyTest {
     public void setUp() throws Exception {
         easyStrategy = new EasyStrategy();
         gameEntity = new GameEntity();
+        gameEntity.setComputerSymbol('O');
     }
     @Test
     public void shouldMakeComputerMoveOnCoord1_0() {

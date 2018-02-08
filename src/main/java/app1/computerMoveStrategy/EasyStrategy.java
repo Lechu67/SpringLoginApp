@@ -19,7 +19,7 @@ public class EasyStrategy implements ComputerMoveStrategy {
                 if (currentBoard[col][row] == EMPTY_FIELD) {
                     x = col;
                     y = row;
-                    return new Move(x,y,board.getGameEntity(),'O');
+                    return new Move(x,y,board.getGameEntity(),board.getGameEntity().getComputerSymbol());
                 }
             }
         }

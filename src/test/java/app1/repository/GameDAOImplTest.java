@@ -36,7 +36,7 @@ public class GameDAOImplTest extends AbstractTransactionalJUnit4SpringContextTes
     @Before
     public void setup(){
         executeSqlScript("insert-data.sql",false);
-        gameEntity = new GameEntity('X',true,user,3,"EASY");
+        gameEntity = new GameEntity('X','O','X',user,3,"EASY");
         gameEntity.setId(1);
         user = new UserEntity("a", "a");
     }

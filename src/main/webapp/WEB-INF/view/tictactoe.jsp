@@ -42,58 +42,68 @@ table {
 
     $(document).ready(function(){
 
-        $.ajax({
-            type: "GET",
-            url: "/tictactoe",
-            success: function (currentBoard) {
-                $.each(currentBoard, function (i, boardResponse) {
-                    $('td[x='+boardResponse.x+'][y='+boardResponse.y+']').append(boardResponse.symbol);
-                });
-            }
-        });
-        alert("It's your move");
-        $("td").click(function(element){
-            console.log($(element.target).attr("x"));
-            console.log($(element.target).attr("y"));
-            //blokada planszy(flags, attrybut html enabled)
-            var moveRequest   = {
-                x: $(element.target).attr("x"),
-                y: $(element.target).attr("y")
-            };
+        getBoard();
+        function getBoard() {
             $.ajax({
-                url : "/playerMove",
-                type : "POST",
-                contentType: "application/json; ; charset=UTF-8", //to co wysylam
-                data : JSON.stringify(moveRequest), //to co dostaje
-                success : function(data){
-
-                    switch(data.status){
-                        case 'TAKEN':
-                            alert("Field already taken!");
-                            break;
-                        case 'WIN':
-                            $(element.target).text(data.symbol);
-                            alert(data.symbol+" wins");
-                            window.location.replace("/")
-                            break;
-                        case 'DRAW':
-                            $(element.target).text(data.symbol);
-                            alert("It's a draw !");
-                            window.location.replace("/")
-                            break;
-                        case 'CONTINUE':
-                            $(element.target).text(data.symbol);
-                            computerMove();
-                            break;
+                type: "GET",
+                url: "/tictactoe",
+                success: function (boardSymbolsResponse) {
+                    $.each(boardSymbolsResponse.symbolsLocations, function (i, boardResponse) {
+                        $('td[x=' + boardResponse.x + '][y=' + boardResponse.y + ']').text(boardResponse.symbol);
+                    });
+                    if (boardSymbolsResponse.symbol == 'X') {
+                        alert("User move")
+                    } else {
+                        alert("Computer move")
+                        computerMove()
                     }
-                },
-                error : function(){
-                    console.log("Response: error");
-                    alert("An error occured");
-                },
+                }
             });
-            console.log(moveRequest);
-        });
+        }
+            $("td").click(function (element) {
+                console.log($(element.target).attr("x"));
+                console.log($(element.target).attr("y"));
+                var moveRequest = {
+                    x: $(element.target).attr("x"),
+                    y: $(element.target).attr("y")
+                };
+                $.ajax({
+                    url: "/playerMove",
+                    type: "POST",
+                    contentType: "application/json; ; charset=UTF-8", //to co wysylam
+                    data: JSON.stringify(moveRequest), //to co dostaje
+                    success: function (data) {
+
+                        switch (data.status) {
+                            case 'TAKEN':
+                                alert("Field already taken!");
+                                break;
+                            case 'WIN':
+                                $(element.target).text(data.symbol);
+                                alert(data.symbol + " wins");
+                                window.location.replace("/")
+                                break;
+                            case 'DRAW':
+                                $(element.target).text(data.symbol);
+                                alert("It's a draw !");
+                                window.location.replace("/")
+                                break;
+                            case 'CONTINUE':
+                                $(element.target).text(data.symbol);
+                                getBoard();
+                                break;
+                            case 'NOT_YOUR_TURN':
+                                alert("Not your turn")
+                                console.log("not your turn player");
+                                break;
+                        }
+                    },
+                    error: function () {
+                        console.log("Response: error");
+                        alert("An error occured");
+                    },
+                });
+            });
         function computerMove() {
 
             $.ajax({
@@ -102,19 +112,25 @@ table {
                 contentType: "application/json; ; charset=UTF-8",
                 success : function(MoveComputerResponse){
 
+                    var writeSymbolOnBoard = $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
                     switch(MoveComputerResponse.status){
                         case 'WIN':
-                            $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
+                            writeSymbolOnBoard;
                             alert(MoveComputerResponse.symbol+" wins");
-                            window.location.replace("/")
+                            window.location.replace("/");
                             break;
                         case 'DRAW':
-                            $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
+                            writeSymbolOnBoard;
                             alert("It's a draw !");
-                            window.location.replace("/")
+                            window.location.replace("/");
                             break;
                         case 'CONTINUE':
-                            $('td[x='+MoveComputerResponse.x+'][y='+MoveComputerResponse.y+']').text(MoveComputerResponse.symbol);
+                            writeSymbolOnBoard;
+                            getBoard();
+                            break;
+                        case 'NOT_YOUR_TURN':
+                            alert("Not your turn")
+                            console.log("not your turn computer");
                             break;
                     }
                 },

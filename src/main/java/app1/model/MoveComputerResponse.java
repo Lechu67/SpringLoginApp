@@ -5,6 +5,10 @@ public class MoveComputerResponse extends MovePlayerResponse {
     int x;
     int y;
 
+    public MoveComputerResponse(GameStatus status, char symbol) {
+        super(status, symbol);
+    }
+
     public MoveComputerResponse(GameStatus status, char symbol, int x, int y) {
         super(status, symbol);
         this.x = x;
