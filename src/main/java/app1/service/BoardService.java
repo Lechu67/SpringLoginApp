@@ -33,7 +33,7 @@ public class BoardService {
     public void saveNewMove(Move move){
         gameDAO.saveNewMove(move);
     }
-    //TODO
+
     public void changePlayer(GameEntity gameEntity){
         char playerSymbol = gameEntity.getUserSymbol();
         char computerSymbol = gameEntity.getComputerSymbol();

@@ -17,9 +17,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyChar;
 import static org.mockito.Matchers.eq;
@@ -44,22 +45,32 @@ public class TicTacToeControllerTest {
     @Mock
     private Authentication authentication;
 
+    @Mock
+    private UserEntity userEntity;
+
     @InjectMocks
     private TicTacToeController controller;
 
     private  MoveRequest moveRequest;
     private  Move move;
-    @Mock
-    private UserEntity userEntity;
+    private GameEntity gameEntity;
+    private List<Move> moves;
+    private Board board;
+
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
         mockStatic(SecurityContextHolder.class);
+        gameEntity = new GameEntity('X','O','O',userEntity,3,"EASY");
+        moves = new ArrayList<>();
+        moves.add(new Move(0,0, gameEntity,'X'));
+        moves.add(new Move(0,1, gameEntity,'O'));
+        move = moves.get(0);
+        board = new Board(gameEntity, moves);
         moveRequest = new MoveRequest();
-        move = new Move();
-        move.setSymbol('X');
         currentMockUser();
+        when(gameService.loadGameByCurrentUser(any())).thenReturn(gameEntity);
     }
     private void currentMockUser() {
         PowerMockito.when(SecurityContextHolder.getContext()).thenReturn(securityContext);
@@ -68,7 +79,7 @@ public class TicTacToeControllerTest {
     }
     @Test
     public void shouldCreateNewGameWhenNoGameExistingAndReturnTicTacToeView() throws Exception {
-        when(gameService.loadGameByCurrentUser(userEntity)).thenReturn(null);
+        when(gameService.loadGameByCurrentUser(any())).thenReturn(null);
         assertEquals("tictactoe", controller.tictactoeView());
         verify(gameService).createNewGame(anyChar(),anyChar(), any(UserEntity.class), eq(Difficulty.EASY));
     }
@@ -78,27 +89,16 @@ public class TicTacToeControllerTest {
         assertEquals("tictactoe", controller.tictactoeView());
     }
 
-//    @Test
-//    public void shouldReturnListOfBoardResponse() {
-//        char[][] testBoard =  new char[3][3];
-//        testBoard[0][0] = 'C';
-//        testBoard[1][1] = 'C';
-//
-//        when(boardService.getActualBoard(any())).thenReturn(boardMock);
-//        when(boardMock.getBoard()).thenReturn(testBoard);
-//
-//        assertEquals(2, controller.sendPopulatedBoard().size());
-//        assertThat(controller.sendPopulatedBoard().get(0), instanceOf(BoardResponse.class));
-//
-//        testBoard[0][0] = '\u0000';
-//        testBoard[1][1] = '\u0000';
-//        assertEquals(0, controller.sendPopulatedBoard().size());
-//    }
+    @Test
+    public void shouldReturnListOfBoardResponse() {
+        when(boardService.getActualBoard(any())).thenReturn(board);
+        assertEquals(2, controller.sendPopulatedBoard().getSymbolsLocations().size());
+    }
     @Test
     public void shouldReturnStatusTakenAndUserSymbol() {
-
         when(boardService.createMove(eq(moveRequest), any())).thenReturn(move);
         when(boardService.isBoardCellAvailable(move)).thenReturn(false);
+        gameEntity.setCurrentPlayingSymbol('X');
         assertEquals(GameStatus.TAKEN, controller.playerMove(moveRequest).getStatus());
         assertEquals('X', controller.playerMove(moveRequest).getSymbol());
     }
@@ -107,18 +107,20 @@ public class TicTacToeControllerTest {
         when(boardService.createMove(eq(moveRequest), any())).thenReturn(move);
         when(boardService.isBoardCellAvailable(move)).thenReturn(true);
         when(boardService.checkGameStatus(any())).thenReturn(GameStatus.WIN);
+        gameEntity.setCurrentPlayingSymbol('X');
 
-        MovePlayerResponse  response = controller.playerMove(moveRequest);
+        MovePlayerResponse response = controller.playerMove(moveRequest);
         assertEquals(GameStatus.WIN, response.getStatus());
         assertEquals('X', response.getSymbol());
         verify(boardService).saveNewMove(move);
-        verify(boardService).removeGame(any());
+        verify(boardService).removeGame(gameEntity);
     }
     @Test
     public void shouldReturnStatusContinueAndChangePlayer() {
-        when(boardService.createMove(eq(moveRequest), any())).thenReturn(move);
+        when(boardService.createMove(eq(moveRequest), eq(gameEntity))).thenReturn(move);
         when(boardService.isBoardCellAvailable(move)).thenReturn(true);
-        when(boardService.checkGameStatus(any())).thenReturn(GameStatus.CONTINUE);
+        when(boardService.checkGameStatus(gameEntity)).thenReturn(GameStatus.CONTINUE);
+        gameEntity.setCurrentPlayingSymbol('X');
 
         MovePlayerResponse  response = controller.playerMove(moveRequest);
         assertEquals(GameStatus.CONTINUE, response.getStatus());
@@ -130,10 +132,10 @@ public class TicTacToeControllerTest {
     public void shouldReturnComputerMove() {
         Move computerMove = new Move();
         computerMove.setSymbol('O');
-        when(boardService.makeComputerMove(any())).thenReturn(computerMove);
-        when(boardService.checkGameStatus(any())).thenReturn(GameStatus.CONTINUE);
+        when(boardService.makeComputerMove(gameEntity)).thenReturn(computerMove);
+        when(boardService.checkGameStatus(gameEntity)).thenReturn(GameStatus.CONTINUE);
 
-        MoveComputerResponse  response = controller.computerMove();
+        MoveComputerResponse response = controller.computerMove();
         assertEquals(GameStatus.CONTINUE, response.getStatus());
         assertEquals('O', response.getSymbol());
         verify(boardService).saveNewMove(computerMove);

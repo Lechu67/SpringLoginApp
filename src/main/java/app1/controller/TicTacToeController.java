@@ -82,16 +82,14 @@ public class TicTacToeController {
     }
 
     private List<BoardResponse> getBoardResponses(GameEntity currentGameEntity) {
-        List<BoardResponse> boardSymbolsLocations;
         Board board = boardService.getActualBoard(currentGameEntity);
-        boardSymbolsLocations = board.getMoves()
+        return board.getMoves()
                 .stream()
                 .map(move ->
                         new BoardResponse(move.getColumn(),
                                 move.getRow(),
                                 move.getSymbol()))
                 .collect(Collectors.toList());
-        return boardSymbolsLocations;
     }
     private GameStatus saveMoveAndGetGameStatus(GameEntity currentGameEntity, Move move) {
         boardService.saveNewMove(move);
