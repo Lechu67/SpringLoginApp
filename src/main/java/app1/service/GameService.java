@@ -31,7 +31,7 @@ public class GameService {
         return symbols[(int) (Math.random() * symbols.length)];
     }
 
-    public GameEntity loadGameByCurrentUser(UserEntity userEntity){
+    public GameEntity loadGameByUser(UserEntity userEntity){
         return gameDAO.findGameByUserName(userEntity);
     }
 }

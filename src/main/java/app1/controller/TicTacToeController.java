@@ -1,10 +1,12 @@
 package app1.controller;
 
 import app1.computerMoveStrategy.Difficulty;
+import app1.config.ActiveUser;
 import app1.model.*;
 import app1.service.BoardService;
 import app1.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -27,26 +29,26 @@ public class TicTacToeController {
     private GameService gameService;
 
     @RequestMapping(value = "/newGame", method = RequestMethod.GET)
-    public String tictactoeView() {
-        if (gameService.loadGameByCurrentUser(getCurrentUser()) == null) {
-            gameService.createNewGame(USER_SYMBOL,COMPUTER_SYMBOL, getCurrentUser(), Difficulty.EASY);
+    public String tictactoeView(@ActiveUser UserEntity userEntity) {
+        if (gameService.loadGameByUser(userEntity) == null) {
+            gameService.createNewGame(USER_SYMBOL,COMPUTER_SYMBOL, userEntity, Difficulty.EASY);
         }
         return "tictactoe";
     }
 
     @RequestMapping(value = "/tictactoe", method = RequestMethod.GET)
     @ResponseBody
-    public BoardSymbolsResponse sendPopulatedBoard() {
-        GameEntity currentGameEntity = gameService.loadGameByCurrentUser(getCurrentUser());
+    public BoardSymbolsResponse sendPopulatedBoard(@ActiveUser UserEntity userEntity) {
+        GameEntity currentGameEntity = gameService.loadGameByUser(userEntity);
         return new BoardSymbolsResponse(getBoardResponses(currentGameEntity), currentGameEntity.getCurrentPlayingSymbol());
     }
 
     @RequestMapping(value = "/playerMove", method = RequestMethod.POST)
     @ResponseBody
-    public MovePlayerResponse playerMove(@RequestBody MoveRequest moveRequest) {
+    public MovePlayerResponse playerMove(@RequestBody MoveRequest moveRequest, @ActiveUser UserEntity userEntity) {
 
         GameEntity currentGameEntity =
-                gameService.loadGameByCurrentUser(getCurrentUser());
+                gameService.loadGameByUser(userEntity);
             Move move = boardService.createMove(moveRequest,currentGameEntity);
 
             if (!isPlayerTurn(currentGameEntity)) {
@@ -65,10 +67,9 @@ public class TicTacToeController {
 
     @RequestMapping(value = "/computerMove", method = RequestMethod.POST)
     @ResponseBody
-    public MoveComputerResponse computerMove() {
-
+    public MoveComputerResponse computerMove(@ActiveUser UserEntity userEntity) {
         GameEntity currentGameEntity =
-                gameService.loadGameByCurrentUser(getCurrentUser());
+                gameService.loadGameByUser(userEntity);
         if (!isComputerTurn(currentGameEntity)) {
             return new MoveComputerResponse(GameStatus.NOT_YOUR_TURN,currentGameEntity.getComputerSymbol());
         }
@@ -93,12 +94,12 @@ public class TicTacToeController {
     }
     private GameStatus saveMoveAndGetGameStatus(GameEntity currentGameEntity, Move move) {
         boardService.saveNewMove(move);
-        return getGameStatus(currentGameEntity);
+        return removeGameIfEndOrChangePlayer(currentGameEntity);
     }
 
-    private GameStatus getGameStatus(GameEntity currentGameEntity) {
+    private GameStatus removeGameIfEndOrChangePlayer(GameEntity currentGameEntity) {
         GameStatus gameStatus = boardService.checkGameStatus(currentGameEntity);
-        if(isEndGame(gameStatus)){
+        if(GameStatus.isEndGame(gameStatus)){
             boardService.removeGame(currentGameEntity);
         }else {
             boardService.changePlayer(currentGameEntity);
@@ -106,15 +107,14 @@ public class TicTacToeController {
         return gameStatus;
     }
 
-    private boolean isEndGame(GameStatus gameStatus) {
-        return gameStatus==GameStatus.WIN || gameStatus == GameStatus.DRAW;
-    }
-    private UserEntity getCurrentUser() {
-        UserDetails currentUser =
-                (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return new UserEntity(
-                currentUser.getUsername(),
-                currentUser.getPassword()
-        );
-    }
+//TODO
+//    public GameStatus move(Symbol symbol, int position) {
+        // kto sie kryje za symbolem
+        // jezeli komputer to ustalamy position = algorytm
+        // wykonujemy ruch moveInternal(User)
+        // sprawdzamy status gry
+        // jezeli koniec gry to wyjscie
+        // jezeli nastepny gracz to komputer to powtorz od kroku 2
+        // zwroc status
+//    }
 }

@@ -17,8 +17,7 @@ public class GameEntity {
 
     @Column(name = "computer_symbol")
     private char computerSymbol;
-    //change name and type in DB
-    //alter table game change old_name new_name varchar(2);
+
     @Column(name = "playing_symbol")
     private char currentPlayingSymbol;
 

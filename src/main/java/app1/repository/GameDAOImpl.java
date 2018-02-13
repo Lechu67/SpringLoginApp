@@ -27,11 +27,10 @@ public class GameDAOImpl implements GameDAO {
     }
     @Override
     public List<Move> findMovesByGame(GameEntity gameEntity) {
-        List<Move> moves = sessionFactory.getCurrentSession()
+        return sessionFactory.getCurrentSession()
                 .createQuery("from Move where game=?")
                 .setParameter(0,gameEntity)
                 .list();
-        return moves;
     }
     @Override
     public void saveNewMove(Move move) {
@@ -50,19 +49,18 @@ public class GameDAOImpl implements GameDAO {
 
     @Override
     public GameEntity findGameByUserName(UserEntity userEntity) {
-        List<GameEntity> gameEntity = sessionFactory.getCurrentSession()
+        return (GameEntity) sessionFactory.getCurrentSession()
                 .createQuery("from GameEntity where user=?")
                 .setParameter(0,userEntity)
-                .list();
-        return gameEntity.size() > 0 ? gameEntity.get(0) : null;
+                .uniqueResult();
     }
     @Override
     public void removeGameAndMoves(GameEntity currentGameEntity) {
-        sessionFactory.getCurrentSession().delete(currentGameEntity);
         sessionFactory.getCurrentSession()
-                .createQuery("delete from Move where game=?1")
-                .setParameter(1,currentGameEntity)
+                .createQuery("delete from Move where game=:game")
+                .setParameter("game",currentGameEntity)
                 .executeUpdate();
+        sessionFactory.getCurrentSession().delete(currentGameEntity);
     }
 
 

@@ -21,9 +21,6 @@ public class Board {
         return board;
     }
 
-    //get taken fields
-
-
     public List<Move> getMoves() {
         return moves;
     }
